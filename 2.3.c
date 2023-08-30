@@ -9,7 +9,7 @@ int main(){
         *(pnum+i) = 2*i;
     }
 
-    for(int i = 0; i<100000; i++){
+    for(int i = 0; i<1000000; i++){
         printf("address of pnum[%d] = %p value = %d\n", i, pnum+i, *(pnum+i));
     }
 
