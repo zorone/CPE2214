@@ -3,9 +3,9 @@
 
 int main(){
     int *pnum;
-    pnum = (int *) malloc(100000*sizeof(int));
+    pnum = (int *) malloc(1000000*sizeof(int));
 
-    for(int i = 0; i<100000; i++){
+    for(int i = 0; i<1000000; i++){
         *(pnum+i) = 2*i;
     }
 
