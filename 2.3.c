@@ -10,7 +10,7 @@ int main(){
     }
 
     for(int i = 0; i<100000; i++){
-        printf("address of pnum[%d] = %p value = %d", i, pnum+i, *(pnum+i));
+        printf("address of pnum[%d] = %p value = %d\n", i, pnum+i, *(pnum+i));
     }
 
     free(pnum);
