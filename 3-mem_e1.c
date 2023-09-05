@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 int main(){
-    int arr[10] = {3, 5, 7, 9, 11};
+    int arr[10] = {3, 5, 7, 9, 11};  
     int *ptr;
 
     ptr = &arr[0];
