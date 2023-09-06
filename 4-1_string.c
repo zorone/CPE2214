@@ -12,5 +12,6 @@ int main(int argc, const char *argv[]){
     str = (char *)realloc(str, 50);
     strcpy(str, "12345678901234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ");
     printf("str = %s\n", str);
+    free(str);
     return 0;
 }
