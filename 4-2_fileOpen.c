@@ -9,7 +9,7 @@ int main(int argc, const char *argv[]){
 
     int count = 0;
     char tempStr[50];
-    char words[100000][50];
+    char words[50000][50];
     int wordNum = 0;
 
     while(count != EOF){
