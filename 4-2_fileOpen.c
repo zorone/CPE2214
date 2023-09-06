@@ -9,16 +9,16 @@ int main(int argc, const char *argv[]){
 
     int count = 0;
     char tempStr[50];
-    char words[20000][50];
+    char words[40000][50];
     int wordNum = 0;
 
     while(count != EOF){
         count = fscanf(fp, "%s ", tempStr);
         printf("%s\n", tempStr);
-        /*if(count != EOF){
+        if(count != EOF){
             strcpy(words[wordNum], tempStr);
             wordNum++;
-        } */
+        }
     }
 
     printf("complete num of words = %d\n", wordNum);
