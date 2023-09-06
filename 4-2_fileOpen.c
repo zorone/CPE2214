@@ -8,16 +8,17 @@ int main(int argc, const char *argv[]){
     fp = fopen("./4-words_alpha.txt", "r");
 
     int count = 0;
-    const char tempStr[50];
-    char words[40000][50];
+    char tempStr[50];
+    char words[20000][50];
     int wordNum = 0;
 
     while(count != EOF){
         count = fscanf(fp, "%s ", tempStr);
-        if(count != EOF){
+        printf("%s\n", tempStr);
+        /*if(count != EOF){
             strcpy(words[wordNum], tempStr);
             wordNum++;
-        }
+        } */
     }
 
     printf("complete num of words = %d\n", wordNum);
