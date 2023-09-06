@@ -9,7 +9,7 @@ int main(int argc, const char *argv[]){
 
     int count = 0;
     char tempStr[50];
-    char words[40000][50];
+    char words[400000][50];
     int wordNum = 0;
 
     while(count != EOF){
@@ -19,6 +19,13 @@ int main(int argc, const char *argv[]){
             strcpy(words[wordNum], tempStr);
             wordNum++;
         }
+        if(wordNum >= 100000){
+            break;
+        }
+
+    }
+    for(int i = 0; i < wordNum; i++){
+        printf("%s\n", words[i]);
     }
 
     printf("complete num of words = %d\n", wordNum);
