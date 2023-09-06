@@ -12,7 +12,7 @@ int main(int argc, const char *argv[]){
 
     while(count != EOF){
         count = fscanf(fp, "%s", tempStr);
-        printf("%s", count);
+        printf("%s", tempStr);
     }
 
     return 0;
