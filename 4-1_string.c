@@ -5,7 +5,7 @@
 int main(int argc, const char *argv[]){
 
     char *str;
-    str = (char *)malloc(20);
+    str = (char *)malloc(21);
     strcpy(str, "12345678901234567890");
     printf("str = %s\n", str);
 
