@@ -11,7 +11,7 @@ int main(int argc, const char *argv[]){
     char tempStr[50];
 
     while(count != EOF){
-        count = fscanf(fp, "%s", tempStr);
+        count = fscanf(fp, "%s ", tempStr);
         printf("%s", tempStr);
     }
 
