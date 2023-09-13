@@ -15,6 +15,7 @@ int main(int argc, char* argv[]){
     phead = createNode();
     printf("%p | %d | %p\n", phead, phead->data, phead->pnext);
     addData(10, phead);
+    printf("%p | %d | %p\n", phead, phead->data, phead->pnext);
     printf("%p | %d | %p\n", phead->pnext, phead->pnext->data, phead->pnext->pnext);
     return 0;
 }
