@@ -9,7 +9,7 @@ struct dictword{
 int main(int argc, char* argv[]){
     struct dictword *pdictword;
     FILE *fp;
-    pdictword = (struct dictword *)malloc(400000*sizeof(struct dictword));
+    pdictword = (pword)malloc(400000*sizeof(struct dictword));
     int count = 0;
     int wcount = 0;
     fp = fopen("./4-words_alpha.txt", "r");
