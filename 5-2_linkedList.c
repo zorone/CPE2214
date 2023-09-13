@@ -15,11 +15,19 @@ int main(int argc, char* argv[]){
     phead = createNode();
     printf("%p | %d | %p\n", phead, phead->data, phead->pnext);
     addData(10, phead);
+    printf("\n");
     printf("%p | %d | %p\n", phead, phead->data, phead->pnext);
     printf("%p | %d | %p\n", phead->pnext, phead->pnext->data, phead->pnext->pnext);
     addData(20, phead);
-    printf("%p | %d | %p\n", phead, phead->data, phead->pnext);
-    printf("%p | %d | %p\n", phead->pnext, phead->pnext->data, phead->pnext->pnext);
+    printf("\n");
+    printf("%p | %d | %p\n", phead,
+                             phead->data,
+                             phead->pnext);
+
+    printf("%p | %d | %p\n", phead->pnext,
+                             phead->pnext->data,
+                             phead->pnext->pnext);
+
     printf("%p | %d | %p\n", phead->pnext->pnext,
                              phead->pnext->pnext->data,
                              phead->pnext->pnext->pnext);
