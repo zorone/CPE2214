@@ -6,8 +6,8 @@ int main(int argc, const char *argv[]){
 
     int maxNum = 40000;
     FILE *fp;
-    char *pword;
-    pword = (char*)malloc(maxNum*sizeof(char*));
+    char **pword;
+    pword = (char**)malloc(maxNum*sizeof(char*));
     int count = 0;
     int wcount = 0;
     char tempStr[50];
