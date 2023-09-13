@@ -8,6 +8,14 @@ struct listNode{
 };
 
 plist createNode(void);
+plist addData(int data, plist phead);
+
+int main(int argc, char* argv[]){
+    plist phead;
+    phead = createNode();
+    printf("%p | %d | %p\n", phead, phead->data, phead->pnext);
+    return 0;
+}
 
 plist createNode(void){
     plist pnew;
@@ -18,9 +26,14 @@ plist createNode(void){
     return pnew;
 }
 
-int main(int argc, char* argv[]){
-    plist phead;
-    phead = createNode();
-    printf("%p | %d | %p\n", phead, phead->data, phead->pnext);
-    return 0;
+plist addData(int data, plist phead){
+    plist pnew;
+    pnew = createNode();
+    
+    if(pnew != NULL){
+    pnew->data = data;
+    pnew->pnext = phead->pnext;
+    phead->pnext = pnew;
+    }
+    return pnew;
 }

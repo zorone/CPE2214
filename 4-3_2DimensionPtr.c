@@ -15,7 +15,7 @@ int main(int argc, const char *argv[]){
 
     while(count != EOF){
         count = fscanf(fp, "%s ", tempStr);
-        pword[wcount] = (char *)malloc(50);
+        pword[wcount] = (char *)malloc(strlen(tempStr));
         strcpy(pword[wcount], tempStr);
 
         printf("%s\n", pword[wcount]);
