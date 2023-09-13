@@ -4,10 +4,9 @@
 
 int main(int argc, const char *argv[]){
 
-    int maxNum = 400000;
+    int maxNum = 40000;
     FILE *fp;
-    char *pword;
-    pword = (char**)malloc(maxNum*sizeof(char));
+    char *pword[maxNum];
     int count = 0;
     int wcount = 0;
     char tempStr[50];
