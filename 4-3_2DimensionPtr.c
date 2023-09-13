@@ -4,7 +4,7 @@
 
 int main(int argc, const char *argv[]){
 
-    int maxNum = 400000;
+    int maxNum = 40000;
     FILE *fp;
     char *pword[maxNum];
     int count = 0;
