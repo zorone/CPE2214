@@ -16,7 +16,11 @@ int main(int argc, char* argv[]){
 
     while(count != EOF){
         (pdictword+wcount)->word = (char *)malloc(50);
-        count = fscanf(fp, "%s \n", pdictword[wcount].word);
+
+        //อ้างถึงสมาชิกของ struct pointer ด้วยเครื่องหมาย ->
+        //อ้างถึงสมาชิกของ strct ทั่วไป ด้วยเครื่องหมาย .
+        count = fscanf(fp, "%s \n",  (pdictword+wcount)->word);
+        //count = fscanf(fp, "%s \n", pdictword[wcount].word);
         //printf("%s\n", word[wcount]);
         wcount++;
     }
