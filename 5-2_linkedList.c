@@ -14,6 +14,8 @@ int main(int argc, char* argv[]){
     plist phead;
     phead = createNode();
     printf("%p | %d | %p\n", phead, phead->data, phead->pnext);
+    addData(10, phead);
+    printf("%p | %d | %p\n", phead->pnext, phead->pnext->data, phead->pnext->pnext);
     return 0;
 }
 
