@@ -25,9 +25,10 @@ int main(int argc, char* argv[]){
         wcount++;
     }
 
+    printf("wcount = %d\n", wcount);
     for(int i = 0; i < wcount; i++){
 
-        printf("%s\n", pdictword[i].word);
+        printf("%d %s\n", i, pdictword[i].word);
     }
 
     return 0;
