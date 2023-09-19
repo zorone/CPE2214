@@ -21,4 +21,5 @@ int generateMatrix(int row, int column){
         }
         printf("\n");
     }
+    return n;
 }
