@@ -10,7 +10,8 @@ int main(){
 
 int expo(float value, float limit){
     int i;
-    for(i = 0; value<=limit; i++){
-        value *= value;
+    float temp = value;
+    for(i = 0; temp<=limit; i++){
+        temp *= value;
     }
 }
