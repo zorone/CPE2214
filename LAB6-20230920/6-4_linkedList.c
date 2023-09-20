@@ -31,7 +31,6 @@ int main(int argc, char* argv[]){
     travelList(phead);
 
     deleteAll(phead);
-    travelList(phead);
     return 0;
 }
 
