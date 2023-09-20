@@ -9,28 +9,17 @@ struct listNode{
 
 plist createNode(void);
 plist addData(int data, plist phead);
+void travelList(plist phead);
 
 int main(int argc, char* argv[]){
     plist phead;
     phead = createNode();
-    printf("%p | %d | %p\n", phead, phead->data, phead->pnext);
+    addData(5, phead);
     addData(10, phead);
-    printf("\n");
-    printf("%p | %d | %p\n", phead, phead->data, phead->pnext);
-    printf("%p | %d | %p\n", phead->pnext, phead->pnext->data, phead->pnext->pnext);
-    addData(20, phead);
-    printf("\n");
-    printf("%p | %d | %p\n", phead,
-                             phead->data,
-                             phead->pnext);
-
-    printf("%p | %d | %p\n", phead->pnext,
-                             phead->pnext->data,
-                             phead->pnext->pnext);
-
-    printf("%p | %d | %p\n", phead->pnext->pnext,
-                             phead->pnext->pnext->data,
-                             phead->pnext->pnext->pnext);
+    addData(29, phead);
+    addData(18, phead);
+    addData(3, phead);
+    ptravel(phead);
     return 0;
 }
 
@@ -53,4 +42,15 @@ plist addData(int data, plist phead){
     phead->pnext = pnew;
     }
     return pnew;
+}
+
+void travelList(plist phead){
+    plist ptravel;
+    ptravel = phead;
+
+    while(ptravel != NULL){
+        printf("%p | %d | %p\n", ptravel, ptravel->data, ptravel->pnext);
+
+        ptravel = ptravel->pnext;
+    }
 }
