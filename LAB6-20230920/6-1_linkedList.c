@@ -19,7 +19,7 @@ int main(int argc, char* argv[]){
     addData(29, phead);
     addData(18, phead);
     addData(3, phead);
-    ptravel(phead);
+    travelList(phead);
     return 0;
 }
 
