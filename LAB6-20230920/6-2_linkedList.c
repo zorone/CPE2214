@@ -14,6 +14,7 @@ plist ithData(int ith, plist phead);
 
 int main(int argc, char* argv[]){
     plist phead;
+    pllist ptemp;
     phead = createNode();
     addData(5, phead);
     addData(10, phead);
@@ -21,6 +22,8 @@ int main(int argc, char* argv[]){
     addData(18, phead);
     addData(3, phead);
     travelList(phead);
+    ptemp = ithData(3, phead);
+    printf("From ptemp %d th position = %p data = %d\n", 3, ptemp, ptemp->data);
     printf("%d th position = %p data = %d\n", 3, ithData(3, phead), ithData(3, phead)->data);
     return 0;
 }
