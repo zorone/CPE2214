@@ -24,7 +24,6 @@ int main(int argc, char* argv[]){
     travelList(phead);
     ptemp = ithData(3, phead);
     printf("From ptemp %d th position = %p data = %d\n", 3, ptemp, ptemp->data);
-    printf("%d th position = %p data = %d\n", 3, ithData(3, phead), ithData(3, phead)->data);
     return 0;
 }
 
