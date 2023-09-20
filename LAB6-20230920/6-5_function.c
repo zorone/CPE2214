@@ -1,4 +1,4 @@
-#include "6-5_function.c"
+#include "6-5_function.h"
 
 plist createNode(void){
     plist pnew;
