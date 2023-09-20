@@ -1,3 +1,5 @@
+#include "6-5_function.c"
+
 plist createNode(void){
     plist pnew;
     pnew = (plist)malloc(sizeof(struct listNode));
