@@ -22,7 +22,7 @@ int main(int argc, char* argv[]){
     addData(18, phead);
     addData(3, phead);
     travelList(phead);
-    ptemp = ithData(3, phead);
+    ptemp = ithData(4, phead);
     printf("From ptemp %d th position = %p data = %d\n", 3, ptemp, ptemp->data);
     return 0;
 }
