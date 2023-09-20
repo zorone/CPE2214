@@ -14,7 +14,7 @@ plist ithData(int ith, plist phead);
 
 int main(int argc, char* argv[]){
     plist phead;
-    pllist ptemp;
+    plist ptemp;
     phead = createNode();
     addData(5, phead);
     addData(10, phead);
