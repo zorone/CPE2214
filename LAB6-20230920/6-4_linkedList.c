@@ -92,6 +92,7 @@ void deleteAll(plist phead){
     while(ptravel != NULL){
         ptemp = ptravel;
         ptravel = ptravel->pnext;
+        printf("delete %p\n", ptemp);
         free(ptemp);
     }
 }
