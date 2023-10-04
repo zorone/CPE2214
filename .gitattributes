@@ -1,3 +1,4 @@
 *.exe filter=lfs diff=lfs merge=lfs -text
 2.3 filter=lfs diff=lfs merge=lfs -text
 *.stackdump filter=lfs diff=lfs merge=lfs -text
+*.docx filter=lfs diff=lfs merge=lfs -text
