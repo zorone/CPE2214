@@ -21,6 +21,11 @@ int main(){
 
         check = fscanf(fpRead, "%s ", str);
 
+        if(i == 0){
+            rand2 = rand() % 100 + 1;
+            nLine = rand1*rand2;
+        }
+        
         if(nLine){
             rand2 = rand() % 100 + 1;
             nLine -= 1;
