@@ -14,7 +14,7 @@ int main(){
     nLine = 0;
     iWord = 0;
 
-    for(int i=0; i<nWord; i++){
+    for(int i=0; iWord<nWord; i++){
         if(check == EOF){
             fpRead = fopen("C:/shared/Documents/CPE2214/Practice/mid-Practice1/4-words_alpha.txt", "r");
             check = 0;
