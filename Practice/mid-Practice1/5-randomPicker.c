@@ -10,19 +10,21 @@ int main(){
     int nLine, nWord, check;
     scanf("%d", &nWord);
 
+    nLine = rand() % 100 + 1;
+
     for(int i=0; i<nWord; i++){
         if(check == EOF){
             fpRead = fopen("./4-words_alpha.txt", "r");
             check = 0;
         }
 
-        nLine = rand() % 100 + 1;
-
         check = fscanf(fpRead, "%s ", str);
 
         if(nLine){
             nLine -= 1;
             continue;
+        }else {
+            nLine = rand() % 100 + 1;
         }
 
         fprintf(fpWrite, "%s\n", str);
