@@ -10,7 +10,7 @@ int main(){
     int nLine, nWord, check;
     scanf("%d", &nWord);
 
-    nLine = rand() % 100 + 1;
+    nLine = rand() % 40000 + 1;
 
     for(int i=0; i<nWord; ){
         if(check == EOF){
