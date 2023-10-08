@@ -5,7 +5,7 @@
 int main(int argc, const char *argv[]){
 
     FILE *fp;
-    fp = fopen("./4-words_alpha.txt", "r");
+    fp = fopen("C:/shared/Documents/CPE2214/Practice/mid-Practice1/4-words_alpha.txt", "r");
 
     int count = 0;
     char tempStr[50];

@@ -12,7 +12,7 @@ int main(int argc, char* argv[]){
     pdictword = (pword)malloc(400000*sizeof(struct dictword));
     int count = 0;
     int wcount = 0;
-    fp = fopen("./4-words_alpha.txt", "r");
+    fp = fopen("C:/shared/Documents/CPE2214/Practice/mid-Practice1/4-words_alpha.txt", "r");
 
     while(count != EOF){
         (pdictword+wcount)->word = (char *)malloc(50);

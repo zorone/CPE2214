@@ -4,7 +4,7 @@
 
 int main(){
     srand(time(NULL));
-    FILE *fpRead = fopen("./4-words_alpha.txt", "r");
+    FILE *fpRead = fopen("C:/shared/Documents/CPE2214/Practice/mid-Practice1/4-words_alpha.txt", "r");
     FILE *fpWrite = fopen("./5-wordList.txt", "a");
     char str[30];
     int nLine, nWord, check;
@@ -14,7 +14,7 @@ int main(){
 
     for(int i=0; i<nWord; i++){
         if(check == EOF){
-            fpRead = fopen("./4-words_alpha.txt", "r");
+            fpRead = fopen("C:/shared/Documents/CPE2214/Practice/mid-Practice1/4-words_alpha.txt", "r");
             check = 0;
         }
 

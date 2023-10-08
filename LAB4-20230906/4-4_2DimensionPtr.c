@@ -12,7 +12,7 @@ int main(int argc, const char *argv[]){
     int wcount = 0;
     char tempStr[50];
 
-    fp = fopen("./4-words_alpha.txt", "r");
+    fp = fopen("C:/shared/Documents/CPE2214/Practice/mid-Practice1/4-words_alpha.txt", "r");
 
     while(count != EOF){
         count = fscanf(fp, "%s ", tempStr);
