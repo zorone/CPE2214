@@ -7,13 +7,14 @@ int main(){
     FILE *fpRead = fopen("C:/shared/Documents/CPE2214/Practice/mid-Practice1/4-words_alpha.txt", "r");
     FILE *fpWrite = fopen("./5-wordList.txt", "a");
     char str[30];
-    int nLine, rand1, rand2, nWord, check;
+    int nLine, rand1, rand2, nWord, iWord, check;
     scanf("%d", &nWord);
 
     rand1 = rand() % 100 + 1;
     nLine = 0;
+    iWord = 0;
 
-    for(int i=0; i<nWord; ){
+    for(int i=0; i<nWord; i++){
         if(check == EOF){
             fpRead = fopen("C:/shared/Documents/CPE2214/Practice/mid-Practice1/4-words_alpha.txt", "r");
             check = 0;
@@ -25,7 +26,7 @@ int main(){
             rand2 = rand() % 100 + 1;
             nLine = rand1*rand2;
         }
-        
+
         if(nLine){
             rand2 = rand() % 100 + 1;
             nLine -= 1;
@@ -36,7 +37,7 @@ int main(){
         }
 
         fprintf(fpWrite, "%s\n", str);
-        i++;
+        iWord++;
     }
 
     fclose(fpRead);
