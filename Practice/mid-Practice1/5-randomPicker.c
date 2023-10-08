@@ -12,7 +12,7 @@ int main(){
 
     nLine = rand() % 100 + 1;
 
-    for(int i=0; i<nWord; i++){
+    for(int i=0; i<nWord; ){
         if(check == EOF){
             fpRead = fopen("C:/shared/Documents/CPE2214/Practice/mid-Practice1/4-words_alpha.txt", "r");
             check = 0;
@@ -28,6 +28,7 @@ int main(){
         }
 
         fprintf(fpWrite, "%s\n", str);
+        i++;
     }
 
     fclose(fpRead);
