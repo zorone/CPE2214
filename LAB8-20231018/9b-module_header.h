@@ -17,6 +17,7 @@ class stack{
         void push(int data);
         void pop(void);
         void showStack(void);
+        int topOfStack(void);
 };
 
 #endif

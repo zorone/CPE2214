@@ -27,3 +27,7 @@ void stack::showStack(){
     }
 
 }
+
+int stack::topOfStack(void){
+    return arrayStack[topIndex];
+}

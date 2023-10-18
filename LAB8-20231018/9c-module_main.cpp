@@ -8,5 +8,7 @@ int main(void){
     stackObject1.pop();
     stackObject1.showStack();
 
+    // cout << stackObject1.arrayStack[stackObject1.topIndex] << endl;
+
     return 0;
 }
