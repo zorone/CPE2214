@@ -28,7 +28,7 @@ void stack::push(int data){
 }
 
 int main(void){
-    stack stackObject1(20);
+    stack stackObject1(120);
     cout << "capacity = " << stackObject1.capacity << endl;
     // invalid: 
     // cout << "topIndex = " << stackObject1.topIndex << endl;
