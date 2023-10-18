@@ -34,7 +34,7 @@ void stack::showStack(){
     cout << "size of stack = " << topIndex + 1 << endl;
 
     for(int i = 0; i < arrayStack.size(); i++){
-
+        cout << "stack index " << i << " = " << arrayStack[i] << endl;
     }
 
 }
