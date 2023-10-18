@@ -9,6 +9,6 @@ int main(void){
     stackObject1.showStack();
     // invalid: private data...
     // cout << stackObject1.arrayStack[stackObject1.topIndex] << endl;
-    cout << stackObject1.topOfStack() << endl;
+    cout << "top of stack = " << stackObject1.topOfStack() << endl;
     return 0;
 }
