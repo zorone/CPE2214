@@ -30,13 +30,18 @@ void stack::push(int data){
 void stack::showStack(){
     cout << "top Index = " << topIndex << endl;
     cout << "capacity = " << capacity << endl;
-    cout << "size of stack = " << arrayStack.size() << endl;
-    // cout << "size of stack = " << topIndex + 1 << endl;
+    // cout << "size of stack = " << arrayStack.size() << endl;
+    cout << "size of stack = " << topIndex + 1 << endl;
+
+    for(int i = 0; i < arrayStack.size(); i++){
+
+    }
 
 }
 
 int main(void){
     stack stackObject1(20);
+    stackObject1.showStack();
 
     return 0;
 }
