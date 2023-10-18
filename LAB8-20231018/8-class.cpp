@@ -27,6 +27,11 @@ void stack::push(int data){
     arrayStack[topIndex] = data;
 }
 
+void stack::pop(){
+    arrayStack[topIndex] = 0;
+    topIndex--;
+}
+
 void stack::showStack(){
     cout << "top Index = " << topIndex << endl;
     cout << "capacity = " << capacity << endl;
