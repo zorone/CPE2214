@@ -7,9 +7,9 @@ class stack{
     private:
         vector<int> arrayStack;
         int topIndex;
+        int capacity;
 
     public:
-        int capacity;
         stack(int maxSize); // constructor for initial size of stack
         void push(int data);
         void pop(void);
@@ -27,11 +27,16 @@ void stack::push(int data){
     arrayStack[topIndex] = data;
 }
 
+void stack::showStack(){
+    cout << "top Index = " << topIndex << endl;
+    cout << "capacity = " << capacity << endl;
+    cout << "size of stack = " << arrayStack.size() << endl;
+    // cout << "size of stack = " << topIndex + 1 << endl;
+
+}
+
 int main(void){
-    stack stackObject1(120);
-    cout << "capacity = " << stackObject1.capacity << endl;
-    // invalid: 
-    // cout << "topIndex = " << stackObject1.topIndex << endl;
+    stack stackObject1(20);
 
     return 0;
 }
