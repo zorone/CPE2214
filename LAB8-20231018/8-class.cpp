@@ -41,6 +41,9 @@ void stack::showStack(){
 
 int main(void){
     stack stackObject1(20);
+    stackObject1.push(20);
+    stackObject1.push(15);
+    stackObject1.push(10);
     stackObject1.showStack();
 
     return 0;
