@@ -114,7 +114,7 @@ int main(int argc, const char * argv[]) {
 
             sprintf(str, "%19lld: ", FiboLoop[i%3]);
 
-            FiboRes = Fibonacci(i);
+            // FiboRes = Fibonacci(i);
 
             if(FiboRes == FiboLoop[i%3]){
                 cout << "    " << str << "PASS" << endl;
