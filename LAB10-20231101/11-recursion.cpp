@@ -94,7 +94,7 @@ int main(int argc, const char * argv[]) {
         }
 
         if(i < 45){
-            FiboRes = Fibonacci(i+1);
+            FiboRes = Fibonacci(i);
 
             if(i < 3){
                 FiboLoop[i%3] = 1;
