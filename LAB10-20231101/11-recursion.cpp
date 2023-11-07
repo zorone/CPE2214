@@ -69,6 +69,13 @@ int main(int argc, const char * argv[]) {
         }
         cout<<"    factorial = "<< factLoop <<endl;
 
+        if(factRes == factLoop){
+            cout << "   " << i << ": PASS" << endl;
+        }
+        else{
+            cout << "   " << i << ": FAIL" << endl;
+        }
+
         sumRes = summation(i);
         cout<<"    summation = "<< sumRes <<endl;
 
