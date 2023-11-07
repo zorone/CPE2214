@@ -84,7 +84,7 @@ int main(int argc, const char * argv[]) {
 
         }
         else{
-                cout << "                 ";
+                cout << "                         ";
         }
 
         sumLoop = 0;
@@ -124,7 +124,7 @@ int main(int argc, const char * argv[]) {
             }
         }
         else{
-            cout << "                     " << endl;
+            cout << "                         " << endl;
         }
 
     }
