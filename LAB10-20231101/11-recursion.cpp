@@ -56,31 +56,26 @@ int main(int argc, const char * argv[]) {
     long long sumLoop = 0;
     long long FiboLoop[3] = {0, 0, 0};
 
-    cout << "--- factorial ---" << endl;
+    cout << "--- factorial ---    --- summation ---    --- Fibonacci ---" << endl;
 
-    for (int i=1; i<=35; i++){
+    for(int i=1; i<=100; i++){
+        if(i < 35){
+            factRes = factorial(i);
 
-        factRes = factorial(i);
+            factLoop = 1;
+            for(int k = 1; k <= i; k++){
+                factLoop *= k;
+            }
 
-        factLoop = 1;
-        for(int k = 1; k <= i; k++){
-            factLoop *= k;
+            if(factRes == factLoop){
+                cout << "       " << "PASS";
+            }
+            else{
+                cout << "       " << "FAIL";
+            }
+
         }
 
-        if(factRes == factLoop){
-            cout << "   " << i << ": PASS" << endl;
-        }
-        else{
-            cout << "   " << i << ": FAIL" << endl;
-        }
-
-    }
-    
-    cout << "\n" << endl;
-    cout << "--- summation ---" << endl;
-
-    for(int i=1; i<=50; i++){
-        
         sumRes = summation(i);
 
         sumLoop = 0;
@@ -89,36 +84,28 @@ int main(int argc, const char * argv[]) {
         }
 
         if(sumRes == sumLoop){
-            cout << "   " << i << ": PASS" << endl;
+            cout << "                 " << "PASS";
         }
         else{
-            cout << "   " << i << ": FAIL" << endl;
+            cout << "                 " << "FAIL";
         }
 
-    }
+        if(i < 45){
+            FiboRes = Fibonacci(i+1);
 
-    cout << "\n" << endl;
-    cout << "--- Fibonacci ---" << endl;
+            if(i < 3){
+                FiboLoop[i%3] = 1;
+            }
+            else{
+                FiboLoop[i%3] = FiboLoop[(i-1)%3] + FiboLoop[(i-2)%3];
+            }
 
-    for(int i=0; i<50; i++){
-        
-        FiboRes = Fibonacci(i+1);
-
-        if(i < 2){
-            FiboLoop[i%3] = 1;
-        }
-        else if (i < 45){
-            FiboLoop[i%3] = FiboLoop[(i-1)%3] + FiboLoop[(i-2)%3];
-        }
-        else{
-            cout << "   " << i+1 << "      " << endl;
-        }
-        
-        if(FiboRes == FiboLoop[i%3]){
-            cout << "   " << i+1 << ": PASS" << endl;
-        }
-        else{
-            cout << "   " << i+1 << ": FAIL" << endl;
+            if(FiboRes == FiboLoop[i%3]){
+                cout << "                 " << "PASS";
+            }
+            else{
+                cout << "                 " << "FAIL";
+            }
         }
     }
 
