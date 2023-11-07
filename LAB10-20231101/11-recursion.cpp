@@ -56,13 +56,13 @@ int main(int argc, const char * argv[]) {
     long long sumLoop = 0;
     long long FiboLoop[3] = {0, 0, 0};
 
-    char str[20] = "\0";
+    char str[25] = "\0";
 
     cout << "   -------- factorial --------    -------- summation --------    -------- Fibonacci --------" << endl;
 
     for(int i=1; i<=100; i++){
 
-        cout << i << ": ";
+        printf("%3s: ", i);
 
         if(i < 21){
 
@@ -103,7 +103,7 @@ int main(int argc, const char * argv[]) {
             cout << "    " << str << "FAIL";
         }
 
-        if(i < 45){
+        if(i < 60){
 
             if(i < 3){
                 FiboLoop[i%3] = 1;
