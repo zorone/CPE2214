@@ -54,7 +54,7 @@ int main(int argc, const char * argv[]) {
     
     long long factLoop = 0;
     long long sumLoop = 0;
-    long long FiboLoop = 0;
+    long long FiboLoop[3] = {0, 0, 0};
 
     cout << "--- factorial ---" << endl;
 
@@ -104,11 +104,18 @@ int main(int argc, const char * argv[]) {
         
         FiboRes = Fibonacci(i);
 
-        FiboLoop = 0;
-        for(int k = 1; k <= i; k++){
-            if(k < 3){
-                FiboLoop = 1;
+        for(int k = 0; k < i; k++){
+            if(k < 2){
+                FiboLoop[k%3] = 1;
             }
+            else{
+                FiboLoop[k%3] = FiboLoop[(k-1)%3] + FiboLoop[(k-2)%3];
+            }
+            cout << " " << FiboLoop[0];
+            cout << " " << FiboLoop[1];
+            cout << " " << FiboLoop[2] << endl;
+
+            
         }
 
     }
