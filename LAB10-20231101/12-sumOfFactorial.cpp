@@ -1,9 +1,5 @@
 #include <iostream>
 
-int sum(int num){
-
-}
-
 int factorial(int num){
     if(num > 1){
         return factorial(num-1)*num;
@@ -16,7 +12,7 @@ int factorial(int num){
 int sumOfFactorial(int num){
     int result = 0;
     if(num > 0){
-        
+        result += sumOfFactorial(num-1);
     }
 }
 
