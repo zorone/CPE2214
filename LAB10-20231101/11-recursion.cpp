@@ -76,6 +76,25 @@ int main(int argc, const char * argv[]) {
             cout << "   " << i << ": FAIL" << endl;
         }
 
+        cout << endl;
+    }
+
+    for(int i=1; i<=35; i++){
+        
+        sumRes = summation(i);
+        cout<<"    summation = "<< sumRes <<endl;
+
+        sumLoop = 0;
+        for(int k = 1; k <= i; k++){
+
+        }
+
+        cout<<"    Fibonucci = "<<Fibonacci(i)<<endl;
+        cout<<endl;
+    }
+
+    for(int i=1; i<=35; i++){
+        
         sumRes = summation(i);
         cout<<"    summation = "<< sumRes <<endl;
 
