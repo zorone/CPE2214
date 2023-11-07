@@ -47,7 +47,7 @@ int Fibonacci(int num){  // show Fibonacci
 }
 
 int main(int argc, const char * argv[]) {
-
+    
     cout<<"factorial = "<<factorial(5)<<endl;
     cout<<"summation = "<<summation(10)<<endl;
     cout<<"Fibonucci = "<<Fibonacci(11)<<endl;
