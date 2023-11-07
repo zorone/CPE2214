@@ -109,17 +109,18 @@ int main(int argc, const char * argv[]) {
             else{
                 cout << "                 " << "FAIL" << endl;
             }
+
+            cout << FiboRes;
+            for(int i = 0; i < 3; i++){
+                if(i == i%3)
+                cout << FiboLoop[i];
+            }
+            cout << endl;
+
         }
         else{
             cout << "                     " << endl;
         }
-
-        cout << FiboRes;
-        for(int i = 0; i < 3; i++){
-            cout << FiboLoop[i];
-        }
-        cout << endl;
-    }
 
     return 0;
 }
