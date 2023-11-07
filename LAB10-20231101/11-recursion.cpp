@@ -112,10 +112,10 @@ int main(int argc, const char * argv[]) {
         }
 
         if(FiboRes == FiboLoop[i%3]){
-            cout << "   " << i << ": PASS" << endl;
+            cout << "   " << i+1 << ": PASS" << endl;
         }
         else{
-            cout << "   " << i << ": FAIL" << endl;
+            cout << "   " << i+1 << ": FAIL" << endl;
         }
     }
 
