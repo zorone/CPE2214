@@ -52,11 +52,31 @@ int main(int argc, const char * argv[]) {
     long long sumRes = 0;
     long long FiboRes = 0;
     
+    long long factLoop = 0;
+    long long sumLoop = 0;
+    long long FiboLoop = 0;
+
     for (int i=1; i<=35; i++){
 
         cout<<"Round "<< i << endl;
-        cout<<"    factorial = "<<factorial(i)<<endl;
-        cout<<"    summation = "<<summation(i)<<endl;
+
+        factRes = factorial(i);
+        cout<<"    factorial = "<< factRes <<endl;
+
+        factLoop = 1;
+        for(int k = 1; k <= i; k++){
+            factLoop *= k;
+        }
+        cout<<"    factorial = "<< factLoop <<endl;
+
+        sumRes = summation(i);
+        cout<<"    summation = "<< sumRes <<endl;
+
+        sumLoop = 0;
+        for(int k = 1; k <= i; k++){
+
+        }
+
         cout<<"    Fibonucci = "<<Fibonacci(i)<<endl;
         cout<<endl;
     }
