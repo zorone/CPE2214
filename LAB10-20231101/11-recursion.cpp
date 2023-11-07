@@ -113,6 +113,12 @@ int main(int argc, const char * argv[]) {
         else{
             cout << "                     " << endl;
         }
+
+        cout << FiboRes;
+        for(int i = 0; i < 3; i++){
+            cout << FiboLoop[i];
+        }
+        cout << endl;
     }
 
     return 0;
