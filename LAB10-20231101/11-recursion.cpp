@@ -2,8 +2,8 @@
 
 using namespace std;
 
-int factorial(int num){   // calculate factorial of num by recursive
-    int result = 0;
+long long factorial(int num){   // calculate factorial of num by recursive
+    long long result = 0;
 
     if( num == 0 ){
         result = 1;
@@ -15,8 +15,8 @@ int factorial(int num){   // calculate factorial of num by recursive
     return result;
 }
 
-int summation(int num){  // calculate summation of 1 to num
-    int result = 0;
+long long summation(int num){  // calculate summation of 1 to num
+    long long result = 0;
 
     if(num == 1){
         result = 1;
@@ -28,9 +28,9 @@ int summation(int num){  // calculate summation of 1 to num
     return result;
 }
 
-int Fibonacci(int num){  // show Fibonacci
+long long Fibonacci(int num){  // show Fibonacci
 
-    int result = 0;
+    long long result = 0;
 
     // 1,1,2,3,5,8,13,21,34,55,89
     if(num == 1){
