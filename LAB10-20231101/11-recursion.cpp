@@ -75,6 +75,9 @@ int main(int argc, const char * argv[]) {
             }
 
         }
+        else{
+                cout << "           ";
+        }
 
         sumRes = summation(i);
 
@@ -106,6 +109,9 @@ int main(int argc, const char * argv[]) {
             else{
                 cout << "                 " << "FAIL" << endl;
             }
+        }
+        else{
+            cout << "                     " << endl;
         }
     }
 
