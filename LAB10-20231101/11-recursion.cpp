@@ -47,6 +47,10 @@ long long Fibonacci(int num){  // show Fibonacci
 }
 
 int main(int argc, const char * argv[]) {
+
+    long long factRes = 0;
+    long long sumRes = 0;
+    long long FiboRes = 0;
     
     for (int i=1; i<=35; i++){
 
