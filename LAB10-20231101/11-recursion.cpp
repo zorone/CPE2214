@@ -58,20 +58,20 @@ int main(int argc, const char * argv[]) {
 
     char str[20] = "\0";
 
-    cout << "  --- factorial ---    --- summation ---    --- Fibonacci ---" << endl;
+    cout << "   -------- factorial --------    -------- summation --------    -------- Fibonacci --------" << endl;
 
     for(int i=1; i<=100; i++){
 
-        cout << i << ":";
+        cout << i << ": ";
 
-        if(i < 35){
+        if(i < 21){
 
             factLoop = 1;
             for(int k = 1; k <= i; k++){
                 factLoop *= k;
             }
 
-            sprintf(str, "%11lld: ", factLoop);
+            sprintf(str, "%19lld: ", factLoop);
 
             factRes = factorial(i);
 
@@ -92,7 +92,7 @@ int main(int argc, const char * argv[]) {
             sumLoop += k;
         }
 
-        sprintf(str, "%11lld: ", sumLoop);
+        sprintf(str, "%19lld: ", sumLoop);
 
         sumRes = summation(i);
 
@@ -112,7 +112,7 @@ int main(int argc, const char * argv[]) {
                 FiboLoop[i%3] = FiboLoop[(i-1)%3] + FiboLoop[(i-2)%3];
             }
 
-            sprintf(str, "%11lld: ", FiboLoop);
+            sprintf(str, "%19lld: ", FiboLoop[i%3]);
 
             FiboRes = Fibonacci(i);
 
