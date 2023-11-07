@@ -111,12 +111,12 @@ int main(int argc, const char * argv[]) {
             }
 
             cout << FiboRes;
-            for(int j = 0; j < 3; i++){
+            for(int j = 0; j < 3; j++){
                 if(j == i%3){
-                    cout << "(" << FiboLoop[i] << ")";
+                    cout << "(" << FiboLoop[j] << ") ";
                 }
                 else{
-                    cout << FiboLoop[i];
+                    cout << FiboLoop[j] << " ";
                 }
             }
             cout << endl;
