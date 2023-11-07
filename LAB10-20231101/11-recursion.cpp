@@ -79,7 +79,7 @@ int main(int argc, const char * argv[]) {
     cout << "\n" << endl;
     cout << "--- summation ---" << endl;
 
-    for(int i=1; i<=100; i++){
+    for(int i=1; i<=50; i++){
         
         sumRes = summation(i);
 
@@ -100,17 +100,20 @@ int main(int argc, const char * argv[]) {
     cout << "\n" << endl;
     cout << "--- Fibonacci ---" << endl;
 
-    for(int i=0; i<45; i++){
+    for(int i=0; i<50; i++){
         
         FiboRes = Fibonacci(i+1);
 
         if(i < 2){
             FiboLoop[i%3] = 1;
         }
-        else{
+        else if (i < 45){
             FiboLoop[i%3] = FiboLoop[(i-1)%3] + FiboLoop[(i-2)%3];
         }
-
+        else{
+            cout << "   " << i+1 << "      " << endl;
+        }
+        
         if(FiboRes == FiboLoop[i%3]){
             cout << "   " << i+1 << ": PASS" << endl;
         }
