@@ -100,24 +100,26 @@ int main(int argc, const char * argv[]) {
     cout << "\n" << endl;
     cout << "--- Fibonacci ---" << endl;
 
-    for(int i=1; i<=100; i++){
+    for(int i=0; i<100; i++){
         
-        FiboRes = Fibonacci(i);
+        FiboRes = Fibonacci(i+1);
 
-        for(int k = 0; k < i; k++){
-            if(k < 2){
-                FiboLoop[k%3] = 1;
-            }
-            else{
-                FiboLoop[k%3] = FiboLoop[(k-1)%3] + FiboLoop[(k-2)%3];
-            }
-            cout << " " << FiboLoop[0];
-            cout << " " << FiboLoop[1];
-            cout << " " << FiboLoop[2] << endl;
-
-            
+        if(i < 2){
+            FiboLoop[i%3] = 1;
         }
+        else{
+            FiboLoop[i%3] = FiboLoop[(i-1)%3] + FiboLoop[(i-2)%3];
+        }
+        cout << " " << FiboLoop[0];
+        cout << " " << FiboLoop[1];
+        cout << " " << FiboLoop[2] << endl;
 
+        if(FiboRes == FiboLoop[i%3]){
+            cout << "   " << i << ": PASS" << endl;
+        }
+        else{
+            cout << "   " << i << ": FAIL" << endl;
+        }
     }
 
     return 0;
