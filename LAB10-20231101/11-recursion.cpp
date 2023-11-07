@@ -71,38 +71,39 @@ int main(int argc, const char * argv[]) {
                 factLoop *= k;
             }
 
-            sprintf(str, "%11s: ", );
+            sprintf(str, "%11lld: ", factLoop);
 
             factRes = factorial(i);
 
             if(factRes == factLoop){
-                cout << "       " << "PASS";
+                cout << str << "PASS";
             }
             else{
-                cout << "       " << "FAIL";
+                cout << str << "FAIL";
             }
 
         }
         else{
-                cout << "           ";
+                cout << "                 ";
         }
-
-        sumRes = summation(i);
 
         sumLoop = 0;
         for(int k = 1; k <= i; k++){
             sumLoop += k;
         }
 
+        sprintf(str, "%11lld: ", sumLoop);
+
+        sumRes = summation(i);
+
         if(sumRes == sumLoop){
-            cout << "                 " << "PASS";
+            cout << "    " << str << "PASS";
         }
         else{
-            cout << "                 " << "FAIL";
+            cout << "    " << str << "FAIL";
         }
 
         if(i < 45){
-            FiboRes = Fibonacci(i);
 
             if(i < 3){
                 FiboLoop[i%3] = 1;
@@ -111,11 +112,15 @@ int main(int argc, const char * argv[]) {
                 FiboLoop[i%3] = FiboLoop[(i-1)%3] + FiboLoop[(i-2)%3];
             }
 
+            sprintf(str, "%11lld: ", FiboLoop);
+
+            FiboRes = Fibonacci(i);
+
             if(FiboRes == FiboLoop[i%3]){
-                cout << "                 " << "PASS" << endl;
+                cout << "    " << str << "PASS" << endl;
             }
             else{
-                cout << "                 " << "FAIL" << endl;
+                cout << "    " << str << "FAIL" << endl;
             }
         }
         else{
