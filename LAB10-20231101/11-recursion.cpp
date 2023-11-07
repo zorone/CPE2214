@@ -110,7 +110,7 @@ int main(int argc, const char * argv[]) {
                 cout << "                 " << "FAIL" << endl;
             }
 
-            cout << FiboRes;
+            cout << FiboRes << " ";
             for(int j = 0; j < 3; j++){
                 if(j == i%3){
                     cout << "(" << FiboLoop[j] << ") ";
