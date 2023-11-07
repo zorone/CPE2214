@@ -111,9 +111,9 @@ int main(int argc, const char * argv[]) {
             }
 
             cout << FiboRes;
-            for(int i = 0; i < 3; i++){
-                if(i == i%3)
-                cout << FiboLoop[i];
+            for(int j = 0; j < 3; i++){
+                if(j == i%3)
+                cout << "(" << FiboLoop[i] << ")";
             }
             cout << endl;
 
