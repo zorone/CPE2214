@@ -103,7 +103,7 @@ int main(int argc, const char * argv[]) {
             cout << "    " << str << "FAIL";
         }
 
-        if(i < 60){
+        if(i <= 100){
 
             if(i < 3){
                 FiboLoop[i%3] = 1;
