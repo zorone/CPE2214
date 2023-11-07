@@ -12,8 +12,14 @@ int factorial(int num){
 int sumOfFactorial(int num){
     int result = 0;
     if(num > 0){
+        result += factorial(num);
         result += sumOfFactorial(num-1);
     }
+    else{
+        result = factorial(1);
+    }
+
+    return result;
 }
 
 int main(){
