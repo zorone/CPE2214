@@ -56,18 +56,16 @@ int main(int argc, const char * argv[]) {
     long long sumLoop = 0;
     long long FiboLoop = 0;
 
+    cout << "--- factorial ---" << endl;
+
     for (int i=1; i<=35; i++){
 
-        cout<<"Round "<< i << endl;
-
         factRes = factorial(i);
-        cout<<"    factorial = "<< factRes <<endl;
 
         factLoop = 1;
         for(int k = 1; k <= i; k++){
             factLoop *= k;
         }
-        cout<<"    factorial = "<< factLoop <<endl;
 
         if(factRes == factLoop){
             cout << "   " << i << ": PASS" << endl;
@@ -76,35 +74,43 @@ int main(int argc, const char * argv[]) {
             cout << "   " << i << ": FAIL" << endl;
         }
 
-        cout << endl;
     }
+    
+    cout << "\n" << endl;
+    cout << "--- summation ---" << endl;
 
-    for(int i=1; i<=35; i++){
+    for(int i=1; i<=100; i++){
         
         sumRes = summation(i);
-        cout<<"    summation = "<< sumRes <<endl;
 
         sumLoop = 0;
         for(int k = 1; k <= i; k++){
-
+            sumLoop += k;
         }
 
-        cout<<"    Fibonucci = "<<Fibonacci(i)<<endl;
-        cout<<endl;
+        if(sumRes == sumLoop){
+            cout << "   " << i << ": PASS" << endl;
+        }
+        else{
+            cout << "   " << i << ": FAIL" << endl;
+        }
+
     }
 
-    for(int i=1; i<=35; i++){
+    cout << "\n" << endl;
+    cout << "--- Fibonacci ---" << endl;
+
+    for(int i=1; i<=100; i++){
         
-        sumRes = summation(i);
-        cout<<"    summation = "<< sumRes <<endl;
+        FiboRes = Fibonacci(i);
 
-        sumLoop = 0;
+        FiboLoop = 0;
         for(int k = 1; k <= i; k++){
-
+            if(k < 3){
+                FiboLoop = 1;
+            }
         }
 
-        cout<<"    Fibonucci = "<<Fibonacci(i)<<endl;
-        cout<<endl;
     }
 
     return 0;
