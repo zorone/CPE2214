@@ -56,16 +56,24 @@ int main(int argc, const char * argv[]) {
     long long sumLoop = 0;
     long long FiboLoop[3] = {0, 0, 0};
 
-    cout << "--- factorial ---    --- summation ---    --- Fibonacci ---" << endl;
+    char str[20] = "\0";
+
+    cout << "  --- factorial ---    --- summation ---    --- Fibonacci ---" << endl;
 
     for(int i=1; i<=100; i++){
+
+        cout << i << ":";
+
         if(i < 35){
-            factRes = factorial(i);
 
             factLoop = 1;
             for(int k = 1; k <= i; k++){
                 factLoop *= k;
             }
+
+            sprintf(str, "%11s: ", );
+
+            factRes = factorial(i);
 
             if(factRes == factLoop){
                 cout << "       " << "PASS";
