@@ -100,7 +100,7 @@ int main(int argc, const char * argv[]) {
     cout << "\n" << endl;
     cout << "--- Fibonacci ---" << endl;
 
-    for(int i=0; i<100; i++){
+    for(int i=0; i<45; i++){
         
         FiboRes = Fibonacci(i+1);
 
