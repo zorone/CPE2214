@@ -110,9 +110,6 @@ int main(int argc, const char * argv[]) {
         else{
             FiboLoop[i%3] = FiboLoop[(i-1)%3] + FiboLoop[(i-2)%3];
         }
-        cout << " " << FiboLoop[0];
-        cout << " " << FiboLoop[1];
-        cout << " " << FiboLoop[2] << endl;
 
         if(FiboRes == FiboLoop[i%3]){
             cout << "   " << i << ": PASS" << endl;
