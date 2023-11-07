@@ -48,11 +48,13 @@ long long Fibonacci(int num){  // show Fibonacci
 
 int main(int argc, const char * argv[]) {
     
-    for (int i=1; i<=100; i++){
+    for (int i=1; i<=35; i++){
 
-        cout<<"factorial = "<<factorial(i)<<endl;
-        cout<<"summation = "<<summation(i)<<endl;
-        cout<<"Fibonucci = "<<Fibonacci(i)<<endl;
+        cout<<"Round "<< i << endl;
+        cout<<"    factorial = "<<factorial(i)<<endl;
+        cout<<"    summation = "<<summation(i)<<endl;
+        cout<<"    Fibonucci = "<<Fibonacci(i)<<endl;
+        cout<<endl;
     }
 
     return 0;
