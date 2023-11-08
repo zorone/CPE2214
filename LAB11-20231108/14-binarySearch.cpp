@@ -70,3 +70,8 @@ void binarySearchTree::insert(int data, pbinaryTree pRootSub){
         cout << "data already exist in the binary tree" << endl;
     }
 }
+
+void binarySearchTree::showTree(pbinaryTree pRootSub){
+
+    cout << pRootSub << "|" << pRootSub->data << pRootSub->leftChild << "|" << pRootSub->rightChild << endl;
+}
