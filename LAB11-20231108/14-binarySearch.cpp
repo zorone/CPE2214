@@ -22,3 +22,14 @@ class binarySearchTree{
         int search(int data);
         int search(int data, pbinaryTree pRootSub);
 };
+
+void binarySearchTree::insert(int data1){
+    pbinaryTree ptemp;
+    if(data1 < pRoot->data){
+        if(pRoot->leftChild == NULL){
+            ptemp = new struct binaryNode;
+            ptemp->data = data;
+            pRoot->leftChild = ptemp;
+        }
+    }
+}

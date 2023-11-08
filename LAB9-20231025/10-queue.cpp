@@ -19,4 +19,8 @@ class queue{
 
 queue::queue(int maxSize){
     capacity = maxSize;
+    size = 0;
+    front = 0;
+    rear = -1;
+    arrayQ.resize(maxSize);
 }
