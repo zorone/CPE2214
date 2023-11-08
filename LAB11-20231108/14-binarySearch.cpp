@@ -89,6 +89,7 @@ int main(int argc, const char *argv[]){
     class binarySearchTree bt1(15);
     bt1.insert(10, bt1.pRoot);
     bt1.insert(20, bt1.pRoot);
+    bt1.insert(12, bt1.pRoot);
     bt1.showTree(bt1.pRoot);
 
     return 0;
