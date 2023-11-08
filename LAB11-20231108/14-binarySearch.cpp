@@ -11,9 +11,9 @@ struct binaryNode{
 };
 
 class binarySearchTree{
-    pbinaryTree pRoot;
     
     public:
+        pbinaryTree pRoot;
         binarySearchTree(int data);
         void insert(int data1); //use overload for pRoot
         void insert(int data, pbinaryTree pRootSub); // use overload for recursive
