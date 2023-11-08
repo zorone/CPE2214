@@ -32,7 +32,7 @@ void binarySearchTree::insert(int data1){
             pRoot->leftChild = ptemp;
         }
         else{
-            insert(data, pRootSub->leftChild);
+            insert(data, pRoot->leftChild);
         }
     }
 }
