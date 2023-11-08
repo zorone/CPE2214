@@ -28,8 +28,25 @@ void binarySearchTree::insert(int data1){
     if(data1 < pRoot->data){
         if(pRoot->leftChild == NULL){
             ptemp = new struct binaryNode;
-            ptemp->data = data;
+            ptemp->data = data1;
             pRoot->leftChild = ptemp;
+        }
+        else{
+            insert(data, pRootSub->leftChild);
+        }
+    }
+}
+
+void binarySearchTree::insert(int data, pbinaryTree pRootSub){
+    pbinaryTree ptemp;
+    if(data < pRootSub->data){
+        if(pRootSub->leftChild == NULL){
+            ptemp = new struct binaryNode;
+            ptemp->data = data;
+            pRootSub->leftChild = ptemp;
+        }
+        else{
+            insert(data, pRootSub->leftChild);
         }
     }
 }
