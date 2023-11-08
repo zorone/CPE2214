@@ -73,5 +73,23 @@ void binarySearchTree::insert(int data, pbinaryTree pRootSub){
 
 void binarySearchTree::showTree(pbinaryTree pRootSub){
 
-    cout << pRootSub << "|" << pRootSub->data << pRootSub->leftChild << "|" << pRootSub->rightChild << endl;
+    cout << pRootSub << "|" << pRootSub->data << "|" << pRootSub->leftChild << "|" << pRootSub->rightChild << endl;
+
+    if(pRootSub->leftChild != NULL){
+        showTree(pRootSub->leftChild);
+    }
+
+    if(pRootSub->rightChild != NULL){
+        showTree(pRootSub->rightChild);
+    }
+}
+
+int main(int argc, const char *argv[]){
+
+    class binarySearchTree bt1(15);
+    bt1.insert(10, bt1.pRoot);
+    bt1.insert(20, bt1.pRoot);
+    bt1.showTree(bt1.pRoot);
+
+    return 0;
 }
