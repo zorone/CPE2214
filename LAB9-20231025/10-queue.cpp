@@ -11,12 +11,12 @@ class queue{
     int size;
 
     public:
-    queue(int capacity);
+    queue(int maxSize);
     void enqueue(int data);
     void dequeue(void);
     void showQueue(void);
 };
 
-queue::queue(int capacity){
-    
+queue::queue(int maxSize){
+    capacity = maxSize;
 }
