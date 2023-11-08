@@ -56,4 +56,17 @@ void binarySearchTree::insert(int data, pbinaryTree pRootSub){
             insert(data, pRootSub->leftChild);
         }
     }
+    else if(data > pRootSub->data){
+        if(pRootSub->rightChild == NULL){
+            ptemp = new struct binaryNode;
+            ptemp->data = data;
+            pRootSub->rightChild = ptemp;
+        }
+        else{
+            insert(data, pRootSub->rightChild);
+        }
+    }
+    else{
+        cout << "data already exist in the binary tree" << endl;
+    }
 }
