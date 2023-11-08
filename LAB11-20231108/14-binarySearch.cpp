@@ -39,7 +39,7 @@ void binarySearchTree::insert(int data1){
             pRoot->leftChild = ptemp;
         }
         else{
-            binarySearchTree::insert(data, pRoot->leftChild);
+            insert(data1, pRoot->leftChild);
         }
     }
 }
