@@ -8,6 +8,7 @@ class queue{
     int capacity;
     int front;
     int rear;
+    int size;
 
     public:
     queue(int capacity);
@@ -15,3 +16,7 @@ class queue{
     void dequeue(void);
     void showQueue(void);
 };
+
+queue::queue(int capacity){
+    
+}
