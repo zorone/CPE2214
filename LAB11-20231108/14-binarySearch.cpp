@@ -16,7 +16,7 @@ class binarySearchTree{
     public:
         binarySearchTree(int data);
         void insert(int data1); //use overload for pRoot
-        void insert(int data, pbinaryTree pRootSub); // user overload for recursive
+        void insert(int data, pbinaryTree pRootSub); // use overload for recursive
         void showTree(void); // for pRoot
         void showTree(pbinaryTree pRootSub); // for recursive
         int search(int data);
