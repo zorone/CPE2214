@@ -94,7 +94,7 @@ void showRangeWithPivot(vector<int> &data, int start, int end, int pivot, temp &
     dest.data.clear();
     for(int i = start; i <= end; i++){
         dest.data.push_back(data[i]);
-        showData(dest.data);
+        // showData(dest.data);
         if(data[i] == pivot){
             cout << "_" << data[i] << "_ ";
         }
@@ -194,8 +194,9 @@ void quickSort(vector<int> &data, int left, int right, temp &tempData){
 
 void insertionSortR(vector<int> &data, int left, int right, temp &tempData){
     int k = 0;
+    int sz = data.size();
     for(int i = left+1; i <= right; i++){
-        for(int j = i; (data[j]<data[j-1]) && (j-1 >= 0); j--){
+        for(int j = i; (data[j+1]<data[j]) && (j-1 >= 0); j--){
             swap(data, j, j-1);
             for( ; tempData.data[k] == data[j]; k++){
 
