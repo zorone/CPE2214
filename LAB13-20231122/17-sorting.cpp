@@ -102,7 +102,7 @@ void showRangeWithPivot(vector<int> &data, int start, int end, int pivot){
 
 void showRangeWithPivot(vector<int> &data, int start, int end, int pivot, vector<int> &dest){
     for(int i = start ; i <= end; i++){
-        dest.assign([i]);
+        dest.insert([i]);
         if(data[i] == pivot){
             cout << "_" << data[i] << "_ ";
         }
