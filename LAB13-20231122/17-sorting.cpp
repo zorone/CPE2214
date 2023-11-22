@@ -11,9 +11,10 @@ int pickPivot(vector<int> &data, int left, int right);
 void quickSort(vector<int> &intArr, int left, int right);
 
 int main(int argc, const char* argv[]){
-    vector<int> data{3, 5, 9, 2, 7, 4, 6, 8, 1};
+    vector<int> data{2, 4, 8, 3, 1, 5, 9, 13, 11, 6, 22, 24, 28, 23, 21, 25, 35, 39, 43, 41, 26};
     showData(data);
-    cout << "pivot = " << pickPivot(data, 0, 8) << endl;
+    quickSort(data, 0, (int)data.size()-1);
+    // cout << "pivot = " << pickPivot(data, 0, 8) << endl;
     // insertionSort(data);
     // bubbleSort(data);
     showData(data);
@@ -73,34 +74,43 @@ int pickPivot(vector<int> &data, int left, int right){
     return data[center];
 }
 
-void quickSort(vector<int> &intArr, int left, int right){
+void quickSort(vector<int> &data, int left, int right){
     int pivotIndex = 0, i = 0, j = 0;
     int pivot = 0;
     if((right - left + 1) > 3){
         // pivotIndex = pickPivot(intArr, left, right);
         pivotIndex = (left+right)/2;
-        pivot = pickPivot(intArr, left, right);
+        pivot = pickPivot(data, left, right);
         // cout << "pivot = " << pivot << " " << left << " " << right << endl;
-        swapA(intArr, pivotIndex, right);
-        showArray(intArr);
+        swap(data, pivotIndex, right);
+        showData(data);
         i = left;
         j = right-1;
         while(i <= j){
-            if((intArr[j]<pivot) && intArr[i]>pivot){
-                swapA(intArr, i, j);
+            if((data[j]<pivot) && data[i]>pivot){
+                swap(data, i, j);
             }
-            else if(intArr[j]>pivot){
+            else if(data[j]>pivot){
                 j--;
             }
-            else if(intArr[i]<= pivot){
+            else if(data[i]<= pivot){
                 i++;
             }
         }
-        swapA(intArr, right, i);
-        quickSort(intArr, left, i-1);
-        quickSort(intArr, i+1, right);
+        swap(data, right, i);
+        quickSort(data, left, i-1);
+        quickSort(data, i+1, right);
     }
     else{
-        insertionSortR(intArr, left, right);
+        insertionSortR(data, left, right);
+    }
+}
+
+void insertionSortR(vector<int> &data, int left, int right){
+    for(int i = left+1; i <= right; i++){
+        for(int j = i; (data[j]<data[j-1]) && (j-1 >= 0); j--){
+            swap(data, j, j-1);
+            showData(data);
+        }
     }
 }
