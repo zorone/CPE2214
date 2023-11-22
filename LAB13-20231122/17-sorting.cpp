@@ -103,7 +103,13 @@ void showRangeWithPivot(vector<int> &data, int start, int end, int pivot, temp &
 }
 
 void showTempRange(vector<int> &data, int start, int end, temp &tempData){
-    for(int i = start ; i <= end; i++){
+    for(int i = 0; i < data.size(); i++){
+        if(i == start){
+            cout << "[";
+        }
+        else if(i == end){
+            cout << "]";
+        }
         if(data[i] == tempData.pivot){
             cout << "_" << data[i] << "_ ";
         }
@@ -150,12 +156,7 @@ void quickSort(vector<int> &data, int left, int right, temp &tempData){
     }
     else if(left == right){
         cout << "Group with 1 member." << endl;
-        showTempRange(data, 0, left-1, tempData);
-        cout << "[ ";
-        cout << data[left];
-        cout << " ] ";
-        showTempRange(data, right+1, data.size()-1, tempData);
-        cout << endl;
+        showTempRange(data, left, right, tempData);
     }
     else{
         cout << "Insertion Sort" << endl;
@@ -168,12 +169,7 @@ void insertionSortR(vector<int> &data, int left, int right, temp &tempData){
         for(int j = i; (data[j]<data[j-1]) && (j-1 >= 0); j--){
             swap(data, j, j-1);
             
-            showRange(data, 0, left-1);
-            cout << "[ ";
-            showRange(data, left, right);
-            cout << "] ";
-            showRange(data, right+1, data.size()-1);
-            cout << endl;
+            showTempRange(data, left, right, tempData);
         }
     }
 }
