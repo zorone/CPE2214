@@ -199,10 +199,12 @@ void insertionSortR(vector<int> &data, int left, int right, temp &tempData){
     for(int i = left+1; i <= right; i++){
         for(int j = i; (data[j+1]<data[j]) && (j < sz); j--){
             swap(data, j+1, j);
-            for( ; tempData.data[k] == data[j] || k < tempSz; k++){
-
+            for( ; k < tempSz; k++){
+                if(tempData.data[k] == data[j]){
+                    swap(tempData.data, k+1, k);
+                    break;
+                }
             }
-            swap(tempData.data, k+1, k);
         }
         showTempRange(data, left, right, tempData);
     }
