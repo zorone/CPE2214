@@ -10,7 +10,7 @@ void insertionSort(vector<int> &data);
 int pickPivot(vector<int> &data, int left, int right);
 void showRange(vector<int> &data, int start, int end);
 void showRangeWithPivot(vector<int> &data, int start, int end, int pivot);
-void quickSort(vector<int> &intArr, int left, int right);
+void quickSort(vector<int> &intArr, int left, int right, temp &tempData);
 void insertionSortR(vector<int> &data, int left, int right);
 
 struct vectorTemp{
@@ -21,9 +21,9 @@ struct vectorTemp{
 
 int main(int argc, const char* argv[]){
     vector<int> data{2, 4, 8, 3, 1, 5, 9, 13, 11, 6, 22, 24, 28, 23, 21, 25, 35, 39, 43, 41, 26};
-    auto tempData = new temp;
+    temp tempData;
     showData(data);
-    quickSort(data, 0, (int)data.size()-1);
+    quickSort(data, 0, (int)data.size()-1, tempData);
     // insertionSort(data);
     // bubbleSort(data);
     showData(data);
@@ -99,12 +99,14 @@ void showRangeWithPivot(vector<int> &data, int start, int end, int pivot){
     }
 }
 
-void quickSort(vector<int> &data, int left, int right){
+void quickSort(vector<int> &data, int left, int right, temp &tempData){
     int pivotIndex = 0, i = 0, j = 0;
     int pivot = 0;
     if((right - left + 1) > 3){
+        tempData.data.empty();
         pivotIndex = (left+right)/2;
         pivot = pickPivot(data, left, right);
+        tempData.pivot = pivot;
         swap(data, pivotIndex, right);
 
         i = left;
@@ -131,8 +133,8 @@ void quickSort(vector<int> &data, int left, int right){
         showRange(data, right+1, data.size()-1);
         cout << endl;
 
-        quickSort(data, left, i-1);
-        quickSort(data, i+1, right);
+        quickSort(data, left, i-1, tempData);
+        quickSort(data, i+1, right, tempData);
     }
     else if(left == right){
         cout << "Group with 1 member." << endl;
