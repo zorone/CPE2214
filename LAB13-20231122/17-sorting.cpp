@@ -9,6 +9,7 @@ void bubbleSort(vector<int> &data);
 void insertionSort(vector<int> &data);
 int pickPivot(vector<int> &data, int left, int right);
 void showRange(vector<int> &data, int start, int end);
+void showRangeWithPivot(vector<int> &data, int start, int end, int pivot);
 void quickSort(vector<int> &intArr, int left, int right);
 void insertionSortR(vector<int> &data, int left, int right);
 
@@ -81,6 +82,17 @@ void showRange(vector<int> &data, int start, int end){
     }
 }
 
+void showRangeWithPivot(vector<int> &data, int start, int end, int pivot){
+    for(int i = start ; i <= end; i++){
+        if(data[i] == pivot){
+            cout << "_" << data[i] << "_ ";
+        }
+        else{
+            cout << data[i] << " ";
+        }
+    }
+}
+
 void quickSort(vector<int> &data, int left, int right){
     int pivotIndex = 0, i = 0, j = 0;
     int pivot = 0;
@@ -88,14 +100,6 @@ void quickSort(vector<int> &data, int left, int right){
         pivotIndex = (left+right)/2;
         pivot = pickPivot(data, left, right);
         swap(data, pivotIndex, right);
-        cout << "pivot = " << pivot << endl;
-
-        showRange(data, 0, left-1);
-        cout << "[ ";
-        showRange(data, left, right);
-        cout << "] ";
-        showRange(data, right+1, data.size()-1);
-        cout << endl;
 
         i = left;
         j = right-1;
@@ -111,6 +115,16 @@ void quickSort(vector<int> &data, int left, int right){
             }
         }
         swap(data, right, i);
+
+        cout << "pivot = " << pivot << endl;
+
+        showRange(data, 0, left-1);
+        cout << "[ ";
+        showRangeWithPivot(data, left, right, pivot);
+        cout << "] ";
+        showRange(data, right+1, data.size()-1);
+        cout << endl;
+
         quickSort(data, left, i-1);
         quickSort(data, i+1, right);
     }
