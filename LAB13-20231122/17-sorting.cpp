@@ -85,6 +85,7 @@ void quickSort(vector<int> &data, int left, int right){
         pivot = pickPivot(data, left, right);
         // cout << "pivot = " << pivot << " " << left << " " << right << endl;
         swap(data, pivotIndex, right);
+        cout << "pivot = " << pickPivot(data, left, right) << endl;
         showData(data);
         i = left;
         j = right-1;
