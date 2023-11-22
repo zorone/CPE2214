@@ -15,7 +15,7 @@ void insertionSortR(vector<int> &data, int left, int right);
 int main(int argc, const char* argv[]){
     vector<int> data{2, 4, 8, 3, 1, 5, 9, 13, 11, 6, 22, 24, 28, 23, 21, 25, 35, 39, 43, 41, 26};
     showData(data);
-    cout << "pivot = " << pickPivot(data, 0, 8) << endl;
+    cout << "pivot = " << pickPivot(data, 0, (int)data.size()-1) << endl;
     quickSort(data, 0, (int)data.size()-1);
     // insertionSort(data);
     // bubbleSort(data);
