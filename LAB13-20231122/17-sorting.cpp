@@ -179,6 +179,8 @@ void quickSort(vector<int> &data, int left, int right, temp &tempData){
         showRange(data, right+1, data.size()-1);
         cout << endl;
 
+        cout << "Enter inner Recursion from left side." << endl;
+        showRangeWithPivot(data, left, i-1, pivot, tempData);
         quickSort(data, left, i-1, tempData);
         quickSort(data, i+1, right, tempData);
     }
@@ -190,12 +192,6 @@ void quickSort(vector<int> &data, int left, int right, temp &tempData){
         cout << "Insertion Sort" << endl;
         insertionSortR(data, left, right, tempData);
     }
-
-    pivot = tempData.pivot;
-    cout << "pivot = " << pivot << endl;
-    cout << "Exit Function" << endl;
-    showRangeWithPivot(data, left, right, pivot, tempData);
-
 }
 
 void insertionSortR(vector<int> &data, int left, int right, temp &tempData){
