@@ -76,7 +76,7 @@ int pickPivot(vector<int> &data, int left, int right){
 }
 
 void showRange(vector<int> &data, int start, int end){
-    for(int i = start ; i < end; i++){
+    for(int i = start ; i <= end; i++){
         cout << data[i] << " ";
     }
 }
@@ -91,10 +91,12 @@ void quickSort(vector<int> &data, int left, int right){
         cout << "pivot = " << pivot << endl;
 
         showRange(data, 0, left-1);
-        cout << " [ ";
+        cout << "[ ";
         showRange(data, left, right);
         cout << "] ";
         showRange(data, right+1, data.size());
+        cout << endl;
+
         i = left;
         j = right-1;
         while(i <= j){
@@ -123,10 +125,11 @@ void insertionSortR(vector<int> &data, int left, int right){
         for(int j = i; (data[j]<data[j-1]) && (j-1 >= 0); j--){
             swap(data, j, j-1);
             showRange(data, 0, left-1);
-            cout << " [ ";
+            cout << "[ ";
             showRange(data, left, right);
             cout << "] ";
             showRange(data, right+1, data.size());
+            cout << endl;
         }
     }
 }
