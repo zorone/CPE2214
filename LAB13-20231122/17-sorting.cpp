@@ -124,7 +124,7 @@ void quickSort(vector<int> &data, int left, int right, temp &tempData){
         swap(data, right, i);
 
         tempData.pivot = pivot;
-        tempData.data = data.
+        tempData.data = new Vector<int>();
 
         cout << "pivot = " << pivot << endl;
 
