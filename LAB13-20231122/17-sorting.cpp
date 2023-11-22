@@ -14,10 +14,10 @@ void bubbleSort(vector<int> &data);
 void insertionSort(vector<int> &data);
 int pickPivot(vector<int> &data, int left, int right);
 void showRange(vector<int> &data, int start, int end);
-void showRangeWithPivot(vector<int> &data, int start, int end, int pivot);
-void showRangeWithPivot(vector<int> &data, int start, int end, int pivot, vector<int> &dest);
+void showRangeWithPivot(vector<int> &data, int start, int end, int pivot, temp &dest);
+void showTempRange(vector<int> &data, int start, int end, temp &tempData);
 void quickSort(vector<int> &intArr, int left, int right, temp &tempData);
-void insertionSortR(vector<int> &data, int left, int right);
+void insertionSortR(vector<int> &data, int left, int right, temp &tempData);
 
 int main(int argc, const char* argv[]){
     vector<int> data{2, 4, 8, 3, 1, 5, 9, 13, 11, 6, 22, 24, 28, 23, 21, 25, 35, 39, 43, 41, 26};
@@ -88,8 +88,11 @@ void showRange(vector<int> &data, int start, int end){
     }
 }
 
-void showRangeWithPivot(vector<int> &data, int start, int end, int pivot){
+void showRangeWithPivot(vector<int> &data, int start, int end, int pivot, temp &dest){
+    dest.pivot = pivot;
+    dest.data.clear();
     for(int i = start ; i <= end; i++){
+        dest.data.push_back(data[i]);
         if(data[i] == pivot){
             cout << "_" << data[i] << "_ ";
         }
@@ -99,10 +102,9 @@ void showRangeWithPivot(vector<int> &data, int start, int end, int pivot){
     }
 }
 
-void showRangeWithPivot(vector<int> &data, int start, int end, int pivot, vector<int> &dest){
+void showTempRange(vector<int> &data, int start, int end, temp &tempData){
     for(int i = start ; i <= end; i++){
-        dest.push_back(data[i]);
-        if(data[i] == pivot){
+        if(data[i] == tempData.pivot){
             cout << "_" << data[i] << "_ ";
         }
         else{
@@ -115,7 +117,6 @@ void quickSort(vector<int> &data, int left, int right, temp &tempData){
     int pivotIndex = 0, i = 0, j = 0;
     int pivot = 0;
     if((right - left + 1) > 3){
-        tempData.data.clear();
         pivotIndex = (left+right)/2;
         pivot = pickPivot(data, left, right);
         swap(data, pivotIndex, right);
@@ -135,13 +136,11 @@ void quickSort(vector<int> &data, int left, int right, temp &tempData){
         }
         swap(data, right, i);
 
-        tempData.pivot = pivot;
-
         cout << "pivot = " << pivot << endl;
 
         showRange(data, 0, left-1);
         cout << "[ ";
-        showRangeWithPivot(data, left, right, pivot, tempData.data);
+        showRangeWithPivot(data, left, right, pivot, tempData);
         cout << "] ";
         showRange(data, right+1, data.size()-1);
         cout << endl;
@@ -151,20 +150,20 @@ void quickSort(vector<int> &data, int left, int right, temp &tempData){
     }
     else if(left == right){
         cout << "Group with 1 member." << endl;
-        showRangeWithPivot(data, 0, left-1, tempData.pivot, tempData.data);
+        showTempRange(data, 0, left-1, tempData);
         cout << "[ ";
         cout << data[left];
         cout << " ] ";
-        showRangeWithPivot(data, right+1, data.size()-1, tempData.pivot, tempData.data);
+        showTempRange(data, right+1, data.size()-1, tempData);
         cout << endl;
     }
     else{
         cout << "Insertion Sort" << endl;
-        insertionSortR(data, left, right);
+        insertionSortR(data, left, right, tempData);
     }
 }
 
-void insertionSortR(vector<int> &data, int left, int right){
+void insertionSortR(vector<int> &data, int left, int right, temp &tempData){
     for(int i = left+1; i <= right; i++){
         for(int j = i; (data[j]<data[j-1]) && (j-1 >= 0); j--){
             swap(data, j, j-1);
