@@ -132,8 +132,8 @@ void quickSort(vector<int> &data, int left, int right){
         cout << "Group with 1 member." << endl;
         showRange(data, 0, left-1);
         cout << "[ ";
-        cout << data[i];
-        cout << "] ";
+        cout << data[left];
+        cout << " ] ";
         showRange(data, right+1, data.size()-1);
         cout << endl;
     }
