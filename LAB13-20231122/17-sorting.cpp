@@ -194,7 +194,7 @@ void quickSort(vector<int> &data, int left, int right, temp &tempData){
     pivot = tempData.pivot;
     cout << "pivot = " << pivot << endl;
     cout << "Exit Function" << endl;
-    showTempTange(data, left, right);
+    showRangeWithPivot(data, left, right, pivot, tempData);
 
 }
 
