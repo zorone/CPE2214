@@ -103,8 +103,9 @@ void showRangeWithPivot(vector<int> &data, int start, int end, int pivot, temp &
 }
 
 void showTempRange(vector<int> &data, int start, int end, temp &tempData){
-    for(int i = 0; i < data.size(); i++){
-        if(i == start || data[i] = tempData.data[0]){
+    int sz = data.size();
+    for(int i = 0; i < sz; i++){
+        if(i == start || data[i] == tempData.data[0]){
             cout << "[ ";
         }
         
