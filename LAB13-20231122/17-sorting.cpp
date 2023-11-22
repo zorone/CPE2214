@@ -190,6 +190,12 @@ void quickSort(vector<int> &data, int left, int right, temp &tempData){
         cout << "Insertion Sort" << endl;
         insertionSortR(data, left, right, tempData);
     }
+
+    pivot = tempData.pivot;
+    cout << "pivot = " << pivot << endl;
+    cout << "Exit Function" << endl;
+    showTempTange(data, left, right);
+
 }
 
 void insertionSortR(vector<int> &data, int left, int right, temp &tempData){
@@ -202,7 +208,7 @@ void insertionSortR(vector<int> &data, int left, int right, temp &tempData){
             for( ; k < tempSz; k++){
                 if(tempData.data[k] == data[j]){
                     swap(tempData.data, k+1, k);
-                    showData(tempData.data);
+                    // showData(tempData.data);
                     break;
                 }
             }
