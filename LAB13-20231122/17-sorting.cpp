@@ -128,7 +128,15 @@ void quickSort(vector<int> &data, int left, int right){
         quickSort(data, left, i-1);
         quickSort(data, i+1, right);
     }
-
+    else if(i == j){
+        cout << "Group with 1 member." << endl;
+        showRange(data, 0, left-1);
+        cout << "[ ";
+        cout << data[i];
+        cout << "] ";
+        showRange(data, right+1, data.size()-1);
+        cout << endl;
+    }
     else{
         cout << "Insertion Sort" << endl;
         insertionSortR(data, left, right);
