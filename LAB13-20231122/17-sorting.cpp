@@ -3,6 +3,11 @@
 
 using namespace std;
 
+struct vectorTemp{
+    vector<int> data;
+    int pivot = -1;
+} typedef temp;
+
 void swap(vector<int> &data, int i, int j);
 void showData(vector<int> &data);
 void bubbleSort(vector<int> &data);
@@ -13,12 +18,6 @@ void showRangeWithPivot(vector<int> &data, int start, int end, int pivot);
 void showRangeWithPivot(vector<int> &data, int start, int end, int pivot, vector<int> &dest);
 void quickSort(vector<int> &intArr, int left, int right, temp &tempData);
 void insertionSortR(vector<int> &data, int left, int right);
-
-struct vectorTemp{
-    vector<int> data;
-    int pivot = -1;
-} typedef temp;
-
 
 int main(int argc, const char* argv[]){
     vector<int> data{2, 4, 8, 3, 1, 5, 9, 13, 11, 6, 22, 24, 28, 23, 21, 25, 35, 39, 43, 41, 26};
