@@ -195,13 +195,14 @@ void quickSort(vector<int> &data, int left, int right, temp &tempData){
 void insertionSortR(vector<int> &data, int left, int right, temp &tempData){
     int k = 0;
     int sz = data.size();
+    int tempSz = tempData.data.size();
     for(int i = left+1; i <= right; i++){
-        for(int j = i; (data[j+1]<data[j]) && (j-1 >= 0); j--){
-            swap(data, j, j-1);
-            for( ; tempData.data[k] == data[j]; k++){
+        for(int j = i; (data[j+1]<data[j]) && (j < sz); j--){
+            swap(data, j+1, j);
+            for( ; tempData.data[k] == data[j] || k < tempSz; k++){
 
             }
-            swap(tempData.data, k, k-1);
+            swap(tempData.data, k+1, k);
         }
         showTempRange(data, left, right, tempData);
     }
