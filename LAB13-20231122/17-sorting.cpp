@@ -180,8 +180,21 @@ void quickSort(vector<int> &data, int left, int right, temp &tempData){
         cout << endl;
 
         cout << "Enter inner Recursion from left side." << endl;
-        showRangeWithPivot(data, left, i-1, pivot, tempData);
+        cout << "[ ";
+        showRange(data, 0, left-1);
+        cout << "] ";
+        showRangeWithPivot(data, left, right, pivot, tempData);
+        showRange(data, right+1, data.size()-1);
+        cout << endl;
         quickSort(data, left, i-1, tempData);
+        
+        cout << "Exit left side. Enter Recursion from right Side." << endl;
+        cout << "[ ";
+        showRange(data, i+1, right);
+        cout << "] ";
+        showRangeWithPivot(data, left, right, pivot, tempData);
+        showRange(data, right+1, data.size()-1);
+        cout << endl;
         quickSort(data, i+1, right, tempData);
     }
     else if(left == right){
