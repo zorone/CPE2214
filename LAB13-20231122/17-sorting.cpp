@@ -16,8 +16,9 @@ int pickPivot(vector<int> &data, int left, int right);
 void showRange(vector<int> &data, int start, int end);
 void showRangeWithPivot(vector<int> &data, int start, int end, int pivot, temp &dest);
 void showTempRange(vector<int> &data, int start, int end, temp &tempData);
-void quickSort(vector<int> &intArr, int left, int right, temp &tempData);
+void quickSort(vector<int> &data, int left, int right, temp &tempData);
 void insertionSortR(vector<int> &data, int left, int right, temp &tempData);
+void showData(vector<int> &data);
 
 int main(int argc, const char* argv[]){
     vector<int> data{2, 4, 8, 3, 1, 5, 9, 13, 11, 6, 22, 24, 28, 23, 21, 25, 35, 39, 43, 41, 26};
