@@ -94,7 +94,7 @@ void quickSort(vector<int> &data, int left, int right){
         cout << "[ ";
         showRange(data, left, right);
         cout << "] ";
-        showRange(data, right+1, data.size());
+        showRange(data, right+1, data.size()-1);
         cout << endl;
 
         i = left;
@@ -114,6 +114,9 @@ void quickSort(vector<int> &data, int left, int right){
         quickSort(data, left, i-1);
         quickSort(data, i+1, right);
     }
+    else if(right - left + 1 < 3){
+        insertionSortR(data, left, right);
+    }
     else{
         cout << "Insertion Sort" << endl;
         insertionSortR(data, left, right);
@@ -128,7 +131,7 @@ void insertionSortR(vector<int> &data, int left, int right){
             cout << "[ ";
             showRange(data, left, right);
             cout << "] ";
-            showRange(data, right+1, data.size());
+            showRange(data, right+1, data.size()-1);
             cout << endl;
         }
     }
