@@ -70,16 +70,17 @@ int pickPivot(vector<int> &data, int left, int right){
         swap(data, center, left);
     }
 
-    return center;
+    return data[center];
 }
 
 void quickSort(vector<int> &intArr, int left, int right){
     int pivotIndex = 0, i = 0, j = 0;
     int pivot = 0;
     if((right - left + 1) > 3){
-        pivotIndex = pickPivot(intArr, left, right);
+        // pivotIndex = pickPivot(intArr, left, right);
         pivotIndex = (left+right)/2;
-        cout << "pivot = " << pivot << " " << left << " " << right << endl;
+        pivot = pickPivot(intArr, left, right);
+        // cout << "pivot = " << pivot << " " << left << " " << right << endl;
         swapA(intArr, pivotIndex, right);
         showArray(intArr);
         i = left;
@@ -95,5 +96,11 @@ void quickSort(vector<int> &intArr, int left, int right){
                 i++;
             }
         }
+        swapA(intArr, right, i);
+        quickSort(intArr, left, i-1);
+        quickSort(intArr, i+1, right);
+    }
+    else{
+        insertionSortR(intArr, left, right);
     }
 }
