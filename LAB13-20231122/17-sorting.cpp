@@ -12,7 +12,8 @@ int pickPivot(vector<int> &data, int left, int right);
 int main(int argc, const char* argv[]){
     vector<int> data{3, 5, 9, 2, 7, 4, 6, 8, 1};
     showData(data);
-    insertionSort(data);
+    cout << "pivot = " << pickPivot(data, 0, 8) << endl;
+    // insertionSort(data);
     // bubbleSort(data);
     showData(data);
 
