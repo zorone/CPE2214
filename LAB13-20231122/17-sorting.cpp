@@ -6,7 +6,7 @@ using namespace std;
 void swap(vector<int> &data, int i, int j);
 void showData(vector<int> &data);
 void bubbleSort(vector<int> &data);
-void insertionSort(vector<int> &data){
+void insertionSort(vector<int> &data);
 
 int main(int argc, const char* argv[]){
     vector<int> data{3, 5, 9, 2, 7, 4, 6, 8, 1};
