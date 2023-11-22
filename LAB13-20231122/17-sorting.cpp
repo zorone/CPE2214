@@ -139,15 +139,13 @@ void insertionSortR(vector<int> &data, int left, int right){
     for(int i = left+1; i <= right; i++){
         for(int j = i; (data[j]<data[j-1]) && (j-1 >= 0); j--){
             swap(data, j, j-1);
-
-            if({    
-                showRange(data, 0, left-1);
-                cout << "[ ";
-                showRange(data, left, right);
-                cout << "] ";
-                showRange(data, right+1, data.size()-1);
-                cout << endl;
-            }
+            
+            showRange(data, 0, left-1);
+            cout << "[ ";
+            showRange(data, left, right);
+            cout << "] ";
+            showRange(data, right+1, data.size()-1);
+            cout << endl;
         }
     }
 }
