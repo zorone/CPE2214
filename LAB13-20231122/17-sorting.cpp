@@ -8,7 +8,7 @@ void showData(vector<int> &data);
 void bubbleSort(vector<int> &data);
 void insertionSort(vector<int> &data);
 int pickPivot(vector<int> &data, int left, int right);
-void quickSort(vector<int> &data, int left, int right);
+void quickSort(vector<int> &intArr, int left, int right);
 
 int main(int argc, const char* argv[]){
     vector<int> data{3, 5, 9, 2, 7, 4, 6, 8, 1};
@@ -70,5 +70,30 @@ int pickPivot(vector<int> &data, int left, int right){
         swap(data, center, left);
     }
 
-    return data[center];
+    return center;
+}
+
+void quickSort(vector<int> &intArr, int left, int right){
+    int pivotIndex = 0, i = 0, j = 0;
+    int pivot = 0;
+    if((right - left + 1) > 3){
+        pivotIndex = pickPivot(intArr, left, right);
+        pivotIndex = (left+right)/2;
+        cout << "pivot = " << pivot << " " << left << " " << right << endl;
+        swapA(intArr, pivotIndex, right);
+        showArray(intArr);
+        i = left;
+        j = right-1;
+        while(i <= j){
+            if((intArr[j]<pivot) && intArr[i]>pivot){
+                swapA(intArr, i, j);
+            }
+            else if(intArr[j]>pivot){
+                j--;
+            }
+            else if(intArr[i]<= pivot){
+                i++;
+            }
+        }
+    }
 }
