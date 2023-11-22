@@ -105,9 +105,21 @@ void showRangeWithPivot(vector<int> &data, int start, int end, int pivot, temp &
 
 void showTempRange(vector<int> &data, int start, int end, temp &tempData){
     int sz = tempData.data.size()-1;
+    int set = 0;
     for(int i = 0; i < data.size(); i++){
-        if(i == start || data[i] == tempData.data[0]){
-            cout << "[ ";
+        if(i == start){
+            cout << "[";
+            set++;
+        }
+
+        if(data[i] == tempData.data[0]){
+            cout << "[";
+            set++;
+        }
+
+        if(set){
+            cout << " ";
+            set = 0;
         }
         
         if(data[i] == tempData.pivot){
@@ -117,8 +129,18 @@ void showTempRange(vector<int> &data, int start, int end, temp &tempData){
             cout << data[i] << " ";
         }
 
-        if(i == end || data[i] == tempData.data[sz]){
-            cout << "] ";
+        if(i == end){
+            cout << "]";
+            set++;
+        }
+        if(data[i] == tempData.data[sz]){
+            cout << "]";
+            set++;
+        }
+
+        if(set){
+            cout << " ";
+            set = 0;
         }
     }
     cout << endl;
