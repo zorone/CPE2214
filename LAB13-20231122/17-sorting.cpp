@@ -16,7 +16,7 @@ void insertionSortR(vector<int> &data, int left, int right);
 struct vectorTemp{
     vector<int> data;
     int pivot = -1;
-} temp;
+} typedef temp;
 
 
 int main(int argc, const char* argv[]){
