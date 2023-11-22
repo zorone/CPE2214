@@ -13,9 +13,15 @@ void showRangeWithPivot(vector<int> &data, int start, int end, int pivot);
 void quickSort(vector<int> &intArr, int left, int right);
 void insertionSortR(vector<int> &data, int left, int right);
 
+struct vectorTemp{
+    vector<int> data;
+    int pivot = -1;
+} temp;
+
 
 int main(int argc, const char* argv[]){
     vector<int> data{2, 4, 8, 3, 1, 5, 9, 13, 11, 6, 22, 24, 28, 23, 21, 25, 35, 39, 43, 41, 26};
+    temp tempData;
     showData(data);
     quickSort(data, 0, (int)data.size()-1);
     // insertionSort(data);
