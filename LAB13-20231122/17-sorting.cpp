@@ -161,10 +161,10 @@ void quickSort(vector<int> &data, int left, int right, temp &tempData){
             if((data[j]<pivot) && data[i]>pivot){
                 swap(data, i, j);
             }
-            else if(data[j]>pivot){
+            else if(data[j] > pivot){
                 j--;
             }
-            else if(data[i]<= pivot){
+            else if(data[i] <= pivot){
                 i++;
             }
         }
@@ -193,9 +193,14 @@ void quickSort(vector<int> &data, int left, int right, temp &tempData){
 }
 
 void insertionSortR(vector<int> &data, int left, int right, temp &tempData){
+    int k = 0;
     for(int i = left+1; i <= right; i++){
         for(int j = i; (data[j]<data[j-1]) && (j-1 >= 0); j--){
             swap(data, j, j-1);
+            for( ; data[k] == data[j]; k++){
+
+            }
+            swap(tempData.data, k, k-1);
         }
         showTempRange(data, left, right, tempData);
     }
