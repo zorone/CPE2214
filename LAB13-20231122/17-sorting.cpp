@@ -128,7 +128,7 @@ void quickSort(vector<int> &data, int left, int right){
         quickSort(data, left, i-1);
         quickSort(data, i+1, right);
     }
-    else if(i == j){
+    else if(left == right){
         cout << "Group with 1 member." << endl;
         showRange(data, 0, left-1);
         cout << "[ ";
