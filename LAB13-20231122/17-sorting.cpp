@@ -92,7 +92,7 @@ void showRange(vector<int> &data, int start, int end){
 void showRangeWithPivot(vector<int> &data, int start, int end, int pivot, temp &dest){
     dest.pivot = pivot;
     dest.data.clear();
-    for(int i = start ; i <= end; i++){
+    for(int i = start; i <= end; i++){
         dest.data.push_back(data[i]);
         if(data[i] == pivot){
             cout << "_" << data[i] << "_ ";
@@ -195,8 +195,7 @@ void insertionSortR(vector<int> &data, int left, int right, temp &tempData){
     for(int i = left+1; i <= right; i++){
         for(int j = i; (data[j]<data[j-1]) && (j-1 >= 0); j--){
             swap(data, j, j-1);
-            
-            showTempRange(data, left, right, tempData);
         }
+        showTempRange(data, left, right, tempData);
     }
 }
