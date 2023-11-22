@@ -15,7 +15,6 @@ void insertionSortR(vector<int> &data, int left, int right);
 int main(int argc, const char* argv[]){
     vector<int> data{2, 4, 8, 3, 1, 5, 9, 13, 11, 6, 22, 24, 28, 23, 21, 25, 35, 39, 43, 41, 26};
     showData(data);
-    cout << "pivot = " << pickPivot(data, 0, (int)data.size()-1) << endl;
     quickSort(data, 0, (int)data.size()-1);
     // insertionSort(data);
     // bubbleSort(data);
@@ -35,7 +34,6 @@ void showData(vector<int> &data){
     for(int i = 0; i<data.size(); i++){
         cout << data[i] << " ";
     }
-    cout << endl;
 }
 
 void bubbleSort(vector<int> &data){
@@ -80,13 +78,13 @@ void quickSort(vector<int> &data, int left, int right){
     int pivotIndex = 0, i = 0, j = 0;
     int pivot = 0;
     if((right - left + 1) > 3){
-        // pivotIndex = pickPivot(intArr, left, right);
         pivotIndex = (left+right)/2;
         pivot = pickPivot(data, left, right);
-        // cout << "pivot = " << pivot << " " << left << " " << right << endl;
         swap(data, pivotIndex, right);
         cout << "pivot = " << pivot << endl;
+        cout << "[ ";
         showData(data);
+        cout << " ]" << endl;
         i = left;
         j = right-1;
         while(i <= j){
@@ -105,6 +103,7 @@ void quickSort(vector<int> &data, int left, int right){
         quickSort(data, i+1, right);
     }
     else{
+        cout << "Insertion Sort" << endl;
         insertionSortR(data, left, right);
     }
 }
@@ -113,7 +112,9 @@ void insertionSortR(vector<int> &data, int left, int right){
     for(int i = left+1; i <= right; i++){
         for(int j = i; (data[j]<data[j-1]) && (j-1 >= 0); j--){
             swap(data, j, j-1);
+            cout << "[ ";
             showData(data);
+            cout << " ]" << endl;
         }
     }
 }
