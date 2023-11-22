@@ -9,6 +9,8 @@ void bubbleSort(vector<int> &data);
 void insertionSort(vector<int> &data);
 int pickPivot(vector<int> &data, int left, int right);
 void quickSort(vector<int> &intArr, int left, int right);
+void insertionSortR(vector<int> &data, int left, int right);
+
 
 int main(int argc, const char* argv[]){
     vector<int> data{2, 4, 8, 3, 1, 5, 9, 13, 11, 6, 22, 24, 28, 23, 21, 25, 35, 39, 43, 41, 26};
