@@ -202,6 +202,7 @@ void insertionSortR(vector<int> &data, int left, int right, temp &tempData){
             for( ; k < tempSz; k++){
                 if(tempData.data[k] == data[j]){
                     swap(tempData.data, k+1, k);
+                    showData(tempData.data);
                     break;
                 }
             }
