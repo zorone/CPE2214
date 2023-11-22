@@ -49,7 +49,7 @@ void bubbleSort(vector<int> &data){
 void insertionSort(vector<int> &data){
     for(int i = 1; i < data.size(); i++){
         for(int j = i; (data[j]<data[j-1]) && (j-1 >= 0); j--){
-            swap(data, i, i-1);
+            swap(data, j, j-1);
             showData(data);
         }
     }
