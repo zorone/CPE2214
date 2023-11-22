@@ -42,6 +42,7 @@ void showData(vector<int> &data){
     for(int i = 0; i<data.size(); i++){
         cout << data[i] << " ";
     }
+    cout << endl;
 }
 
 void bubbleSort(vector<int> &data){
@@ -103,8 +104,8 @@ void showRangeWithPivot(vector<int> &data, int start, int end, int pivot, temp &
 }
 
 void showTempRange(vector<int> &data, int start, int end, temp &tempData){
-    int sz = data.size()-1;
-    for(int i = 0; i <= sz; i++){
+    int sz = tempData.data.size()-1;
+    for(int i = 0; i < data.size(); i++){
         if(i == start || data[i] == tempData.data[0]){
             cout << "[ ";
         }
@@ -117,9 +118,10 @@ void showTempRange(vector<int> &data, int start, int end, temp &tempData){
         }
 
         if(i == end || data[i] == tempData.data[sz]){
-            cout << " ]";
+            cout << "] ";
         }
     }
+    cout << endl;
 }
 
 void quickSort(vector<int> &data, int left, int right, temp &tempData){
