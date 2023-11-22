@@ -151,7 +151,7 @@ void quickSort(vector<int> &data, int left, int right, temp &tempData){
     }
     else if(left == right){
         cout << "Group with 1 member." << endl;
-        showRangeWithPivot(0, left-1, data.size()-1, tempData.pivot, tempData.data);
+        showRangeWithPivot(data, 0, left-1, tempData.pivot, tempData.data);
         cout << "[ ";
         cout << data[left];
         cout << " ] ";
