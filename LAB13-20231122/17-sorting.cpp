@@ -150,6 +150,7 @@ void showTempRange(vector<int> &data, int start, int end, temp &tempData){
 void quickSort(vector<int> &data, int left, int right, temp &tempData){
     int pivotIndex = 0, i = 0, j = 0;
     int pivot = 0;
+    vector<int> tempVector;
     if((right - left + 1) > 3){
         pivotIndex = (left+right)/2;
         pivot = pickPivot(data, left, right);
