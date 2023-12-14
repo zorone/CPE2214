@@ -52,5 +52,6 @@ int queue::showQueue(){
 int main(){
     queue Q(10);
     Q.enqueue(7);
+    Q.showQueue();
     return 0;
 }
