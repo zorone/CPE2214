@@ -16,6 +16,7 @@ class queue{
     public:
         queue(int size);
         int enqueue(int data);
+        int showQueue();
 };
 
 queue::queue(int size){
@@ -35,6 +36,16 @@ int queue::enqueue(int data){
     else{
         cout << "Queue is full" << endl;
     }
+    return 0;
+}
+
+int queue::showQueue(){
+    int index = front;
+    for(int i = 0; i < size; i++){
+        cout << arrayQ[index] << " ";
+        index = (index+1)%capacity;
+    }
+    cout << endl;
     return 0;
 }
 
