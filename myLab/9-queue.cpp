@@ -14,13 +14,13 @@ class queue{
         int capacity;
     
     public:
-        queue(int size);
+        queue(int maxSize);
         int enqueue(int data);
         int showQueue();
 };
 
-queue::queue(int size){
-    capacity = size;
+queue::queue(int maxSize){
+    capacity = maxSize;
     size = 0;
     front = 0;
     rear = -1;
