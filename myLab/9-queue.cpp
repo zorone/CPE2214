@@ -24,7 +24,7 @@ queue::queue(int maxSize){
     size = 0;
     front = 0;
     rear = -1;
-    arrayQ.resize(size);
+    arrayQ.resize(maxSize);
 }
 
 int queue::enqueue(int data){
