@@ -7,7 +7,7 @@ using namespace std;
 
 class queue{
     private:
-        vector<int> data;
+        vector<int> arrayQ;
         int front;
         int rear;
         int size;
@@ -23,17 +23,23 @@ queue::queue(int size){
     size = 0;
     front = 0;
     rear = -1;
-    data.resize(size);
+    arrayQ.resize(size);
 }
 
 int queue::enqueue(int data){
     if(size < capacity){
         rear = (size+1)%capacity;
-        data[rear] = data;
+        arrayQ[rear] = data;
+        size++;
+    }
+    else{
+        cout << "Queue is full" << endl;
     }
     return 0;
 }
 
 int main(){
+    queue Q(10);
+    Q.enqueue(7);
     return 0;
 }
