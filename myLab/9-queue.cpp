@@ -5,14 +5,35 @@
 
 using namespace std;
 
-int dataGenerator(vector<int> data, int size);
+class queue{
+    private:
+        vector<int> data;
+        int front;
+        int rear;
+        int size;
+        int capacity;
+    
+    public:
+        queue(int size);
+        int enqueue(int data);
+};
+
+queue::queue(int size){
+    capacity = size;
+    size = 0;
+    front = 0;
+    rear = -1;
+    data.resize(size);
+}
+
+int queue::enqueue(int data){
+    if(size < capacity){
+        rear = (size+1)%capacity;
+        data[rear] = data;
+    }
+    return 0;
+}
 
 int main(){
-    vector<int> data{7, 5, 4, 3, 2, 6};
-    data.resize(10);
-    dataGenerator(data, 10);
-    for(int i=0; i<10; i++){
-        cout << data[i] << " ";
-    }
     return 0;
 }
