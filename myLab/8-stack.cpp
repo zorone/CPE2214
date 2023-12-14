@@ -10,7 +10,7 @@ int dataGenerator(vector<int> *data, int size);
 int main(){
     vector<int> data;
     data.resize(10);
-    dataGenerator(data, 10);
+    dataGenerator(&data, 10);
     for(int i=0; i<10; i++){
         cout << data[i] << " ";
     }
