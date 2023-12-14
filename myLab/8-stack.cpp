@@ -20,6 +20,6 @@ int main(){
 int dataGenerator(vector<int> *data, int size){
     srand(time(NULL));
     for(int i = 0; i < size; i++){
-        data[i] = rand()%100;
+        data->insert(rand()%100);
     }
 }
