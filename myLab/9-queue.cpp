@@ -29,7 +29,7 @@ queue::queue(int maxSize){
 
 int queue::enqueue(int data){
     if(size < capacity){
-        rear = (size+1)%capacity;
+        rear = (rear+1)%capacity;
         arrayQ[rear] = data;
         size++;
     }
