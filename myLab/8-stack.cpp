@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int dataGenerator(vector<int> *data, int size);
+int dataGenerator(vector<int> data, int size);
 
 int main(){
     vector<int> data;
@@ -20,6 +20,6 @@ int main(){
 int dataGenerator(vector<int> *data, int size){
     srand(time(NULL));
     for(int i = 0; i < size; i++){
-
+        data[i] = rand()%100;
     }
 }
