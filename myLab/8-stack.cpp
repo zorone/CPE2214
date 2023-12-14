@@ -17,7 +17,7 @@ int main(){
     return 0;
 }
 
-int dataGenerator(vector<int> *data, int size){
+int dataGenerator(vector<int> data, int size){
     srand(time(NULL));
     for(int i = 0; i < size; i++){
         data->push_back(rand()%100);
