@@ -19,6 +19,8 @@ void merge(int numbers[], int temp[], int left, int mid, int right) {
     left_end = mid - 1;
     tmp_pos = left;
     num_elements = right - left + 1;
+    showStep(numbers, tmp_pos - num_elements, tmp_pos - 1);
+
     while ((left <= left_end) && (mid <= right)) {
         if (numbers[left] <= numbers[mid]) {
             temp[tmp_pos] = numbers[left];
@@ -44,7 +46,6 @@ void merge(int numbers[], int temp[], int left, int mid, int right) {
         numbers[right] = temp[right];
         right = right - 1;
     }
-    showStep(numbers, tmp_pos - num_elements, tmp_pos - 1);
 }
 
 void mergeSort(int numbers[], int temp[], int left, int right) {
