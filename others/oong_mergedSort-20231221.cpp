@@ -19,7 +19,7 @@ void merge(int numbers[], int temp[], int left, int mid, int right) {
     left_end = mid - 1;
     tmp_pos = left;
     num_elements = right - left + 1;
-    showStep(numbers, tmp_pos - num_elements, tmp_pos - 1);
+    showStep(numbers, left, right - 1);
 
     while ((left <= left_end) && (mid <= right)) {
         if (numbers[left] <= numbers[mid]) {
