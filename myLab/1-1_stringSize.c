@@ -1,24 +1,3 @@
-#include<stdio.h>
-
-int stringSize(char *str);
-
-int main(){
-    int size;
-    char str[20];
-
-    scanf("%s", str);
-    size = stringSize(str);
-
-    printf("%d\n", size);
-
-    return 0;
-}
-
-int stringSize(char *str){
-    int i = 0;
-    while(str[i] != '\0'){
-        i++;
-    }
-
-    return i;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b4e17c1daa7ce6677dbb2f45acf4c3ddab7612595184c594644e613f7b1c0a4b
+size 314

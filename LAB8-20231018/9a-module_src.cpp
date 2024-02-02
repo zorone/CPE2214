@@ -1,33 +1,3 @@
-#include "9b-module_header.h"
-
-stack::stack(int maxSize){
-    arrayStack.resize(maxSize);
-    topIndex = -1;
-    capacity = maxSize;
-}
-
-void stack::push(int data){
-    topIndex++;
-    arrayStack[topIndex] = data;
-}
-
-void stack::pop(){
-    arrayStack[topIndex] = 0;
-    topIndex--;
-}
-
-void stack::showStack(){
-    cout << "top Index = " << topIndex << endl;
-    cout << "capacity = " << capacity << endl;
-    // cout << "size of stack = " << arrayStack.size() << endl;
-    cout << "size of stack = " << topIndex + 1 << endl;
-
-    for(int i = 0; i < arrayStack.size(); i++){
-        cout << "stack index " << i << " = " << arrayStack[i] << endl;
-    }
-
-}
-
-int stack::topOfStack(void){
-    return arrayStack[topIndex];
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:243ef29dd40a5b4656483c2c864aea99660fae7fa329914c8c06ec87f639427d
+size 749

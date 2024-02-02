@@ -1,17 +1,3 @@
-#pragma once
-
-#include<stdio.h>
-#include<stdlib.h>
-
-typedef struct listNode *plist;
-struct listNode{
-    int data;
-    plist pnext; //เก็บ Adress ของโหนด list ตัวถัดไป
-};
-
-plist createNode(void);
-plist addData(int data, plist phead);
-void travelList(plist phead);
-plist ithData(int ith, plist phead);
-void deleteIth(int ith, plist phead);
-void deleteAll(plist phead);
+version https://git-lfs.github.com/spec/v1
+oid sha256:980a908af3e0e070fefdc04b6b7cea25bbc0c2c0504f963f79217745505fec03
+size 421

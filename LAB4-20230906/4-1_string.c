@@ -1,17 +1,3 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-
-int main(int argc, const char *argv[]){
-
-    char *str;
-    str = (char *)malloc(21);
-    strcpy(str, "12345678901234567890");
-    printf("str = %s\n", str);
-
-    str = (char *)realloc(str, 50);
-    strcpy(str, "12345678901234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-    printf("str = %s\n", str);
-    free(str);
-    return 0;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:35417af0d82f76a74dbc6f347f174dacefc875b78924d582f7542045d8b97e69
+size 396

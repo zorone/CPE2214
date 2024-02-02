@@ -1,27 +1,3 @@
-#include<iostream>
-#include<vector>
-#include<cstdlib>
-#include<ctime>
-
-using namespace std;
-
-int dataGenerator(vector<int> data, int size);
-
-int main(){
-    vector<int> data;
-    data.resize(10);
-    dataGenerator(data, 10);
-    for(int i=0; i<10; i++){
-        cout << data[i] << " ";
-    }
-    return 0;
-}
-
-int dataGenerator(vector<int> data, int size){
-    srand(time(nullptr));
-    for(int i = 0; i < size; i++){
-        data.push_back(rand()%100);
-    }
-
-    return 0;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e34f73bbb252e06395e25e53967158004a31ef81ac3f7caa1a12f03185f95abd
+size 501

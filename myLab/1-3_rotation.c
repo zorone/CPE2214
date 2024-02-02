@@ -1,21 +1,3 @@
-#include<stdio.h>
-
-int rotate(float arc);
-
-int main(){
-    float arc;
-    int i;
-    scanf("%f", &arc);
-    i = rotate(arc);
-    printf("%d", i);
-    return 0;
-}
-
-int rotate(float arc){
-    int i;
-    float rotation = 0;
-    for(i=0; rotation<360; i++){
-        rotation = rotation + arc;
-    }
-    return i;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7ed71fe97f08d0cdb961501e3a24e03c151b33068c3d587c4a7ef0cb77f75cba
+size 330

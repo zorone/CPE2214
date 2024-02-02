@@ -1,26 +1,3 @@
-#include <iostream>
-#include <vector>
-
-using namespace std;
-
-class queue{
-    vector<int> arrayQ;
-    int capacity;
-    int front;
-    int rear;
-    int size;
-
-    public:
-    queue(int maxSize);
-    void enqueue(int data);
-    void dequeue(void);
-    void showQueue(void);
-};
-
-queue::queue(int maxSize){
-    capacity = maxSize;
-    size = 0;
-    front = 0;
-    rear = -1;
-    arrayQ.resize(maxSize);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fbb9e51e87ccd50c659febf57e7a718c075932d8f01f4acc755ba92db19a380c
+size 427

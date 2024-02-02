@@ -1,21 +1,3 @@
-#include<stdio.h>
-
-int summation(float start, float stop, float step);
-
-int main(){
-    float start, limit, step;
-    int i;
-    scanf("%f %f %f", &start, &limit, &step);
-    i = summation(start, limit, step);
-    printf("%d\n", i);
-    return 0;
-}
-
-int summation(float start, float limit, float step){
-    int i, sum = start;
-    for(i = 0; sum <= limit; i++){
-        start += step;
-        sum += start;
-    }
-    return i;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a32a525c7bad8519ccbdeca4bd83292aae72b38b39a0d2da88e0d9722a02af75
+size 448

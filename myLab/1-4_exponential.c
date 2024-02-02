@@ -1,23 +1,3 @@
-#include<stdio.h>
-
-int expo(float value, float limit);
-
-int main(){
-    float value, limit;
-    int i;
-    scanf("%f %f", &value, &limit);
-    i = expo(value, limit);
-    printf("%d\n", i);
-
-    return 0;
-}
-
-int expo(float value, float limit){
-    int i;
-    float temp = value;
-    for(i = 0; temp<=limit; i++){
-        temp *= value;
-    }
-
-    return i;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:71513d354a7f9c87a1ed83b37bee6c8241bb285e7d683475677e70f1fe63a478
+size 380

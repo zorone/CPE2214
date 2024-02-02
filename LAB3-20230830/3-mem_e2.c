@@ -1,14 +1,3 @@
-#include<stdio.h>
-
-int main(){
-    int arr[10] = {3, 5, 7, 9, 11, 543, 765643, 5341, 5667, -12134};
-    int *ptr;
-
-    ptr = &arr[0]; //refer ptr to arr[0]
-
-    for(int i = 0; i<10; i++){  //print all data in arr[] by addr
-        printf("num[%d] = %d\n", i, *(ptr+i)); 
-    }
-
-    return 0;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3310e77f59e84f40f286d9d1048b614e49f6ebd51ad8ba263d977d6ead318793
+size 306

@@ -1,29 +1,3 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-
-int main(int argc, const char *argv[]){
-
-    int maxNum = 400000;
-    FILE *fp;
-    char *pword[maxNum];
-    int count = 0;
-    int wcount = 0;
-    char tempStr[50];
-
-    fp = fopen("C:/shared/Documents/CPE2214/Practice/mid-Practice1/4-words_alpha.txt", "r");
-
-    while(count != EOF){
-        count = fscanf(fp, "%s ", tempStr);
-        pword[wcount] = (char *)malloc(strlen(tempStr));
-        strcpy(pword[wcount], tempStr);
-
-        printf("%s\n", pword[wcount]);
-        wcount++;
-
-    }
-
-    printf("wcount = %d\n", wcount);
-
-    return 0;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:837fd590b47ec626ead8d312ac102d9e40dfd7bab6e2ed3ea4d3183bc4d5f927
+size 631

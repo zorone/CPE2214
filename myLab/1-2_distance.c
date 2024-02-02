@@ -1,21 +1,3 @@
-#include<stdio.h>
-
-int counter(float start, float stop, float step);
-
-int main(){
-    float start, stop, step;
-    int count;
-    scanf("%f %f %f", &start, &stop, &step);
-    count = counter(start, stop, step);
-    printf("%d\n", count);
-    return 0;
-}
-
-int counter(float start, float stop, float step){
-    int i;
-    for(i=0; start<stop; i++, start += step){
-
-    }
-
-    return i;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a64eb9eaa39d652c5d4bb67142df14ab6423f40e499f07eae414f89afcaa5d13
+size 405
